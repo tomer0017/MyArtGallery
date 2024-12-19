@@ -1,0 +1,1297 @@
+//fonts//
+.rubikLight {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+  }
+  
+  .rubikRegular {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+  }
+  
+  .rubikMedium {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+  }
+  
+  .rubikBold {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
+  }
+  
+  .rubikBlack {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 900;
+  }
+  
+
+.gif_header{
+    height: 60vh;
+    object-fit: cover;
+    /* margin-bottom: 20px; */
+   }
+
+
+   .mockupWall {  /*wall mockup picture */
+    width: 100%; /* Set the desired width */
+    height: 82vh; /* Set the desired height */
+    background-image: url('http://www.uploads.co.il/uploads/images/963592288.jpg'); /* Set the background image */
+    background-size: cover; /* Ensure the image covers the container */
+    background-position: center; /* Center the image within the container */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    overflow: hidden; /* Hide any overflowing content */
+    position: relative; /* Needed for absolute positioning of img */
+  }
+
+  .mockup_sofa{
+    width: 730px;
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -105%);
+    /* z-index: 2; */
+    display: flex;
+    bottom: -16%;
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+      filter:         drop-shadow(5px 5px 5px #222); 
+  }
+
+  .mockup_pic{
+    margin-top: 23px;
+    width: 100px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    /* z-index: 1; */
+    box-shadow: -3px 2px 8px 6px rgba(19, 19, 19, 0.3);
+    border: 3px solid #202020;
+    border-radius: 1px;
+  }
+/*         gallery         */
+
+
+
+.App {
+    text-align: center;
+    direction: rtl;
+    background-color: #272727;
+  
+  }
+  
+  .App-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+  
+  .line_space {
+    border-top: 2px solid rgb(67, 67, 67);
+    margin: 20px;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+  
+  .App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  .App-link {
+    color: #61dafb;
+  }
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  
+  @font-face {
+    font-family: 'Ernest and Emily';
+    src: url('ErnestandEmily.eot');
+    src: local('Ernest and Emily'), local('ErnestandEmily'),
+        url('ErnestandEmily.eot?#iefix') format('embedded-opentype'),
+        url('ErnestandEmily.woff2') format('woff2'),
+        url('ErnestandEmily.woff') format('woff'),
+        url('ErnestandEmily.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  .about_me{
+    border-radius: 40px;
+    background: rgba(164, 164, 164, 0.7); /* semi-transparent background */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4); /* subtle shadow for depth */
+    backdrop-filter: blur(10px); /* glass effect */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    border: 1px solid rgba(219, 219, 219, 0.3); /* subtle border for glass edge */
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .about_me_text{
+    /* margin: 40px; */
+    color: white;
+  font-family: inherit, Haettenschweiler, 'Arial Narrow Bold', sans-serif;;
+  }
+  
+  .about_me_pic{
+    /* border: 5px solid #ddd;
+    border-radius: 4px; */
+    /* margin: 30px; */
+    width: 75%;
+  
+  }
+  
+  
+  .img_gallery {
+    /* float: left; */
+    width:  100%;
+    height:70%;
+    object-fit:cover;
+  }
+  
+  
+  .main{
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  
+  
+  
+  
+  .content{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  
+  }
+  /* 
+  .overlay{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    /* height: 100%; */
+    /* background-color: rgba(0,0,0,.2); 
+  } */
+  
+  .navbar {
+  z-index: 2;
+  }
+  
+  .navbar_text{
+    font: size 21px !important; ;
+  }
+  
+  .logo{
+    width: 100px;
+    height: 50px;
+  }
+  /* 
+  .wall_parent{
+    top:0;
+    left: 0;
+    position: relative;
+  }
+  
+  .big_wall{
+    position: absolute;
+      top: 0;
+      left: 0;
+    width: 100%;
+    height: 530px;
+    background-color: rgb(83, 83, 83);
+    object-fit: cover;
+  }
+  
+  .floor{
+    position: absolute;
+    top: 530px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: rgb(119, 119, 119);
+    object-fit: cover;
+  }
+  
+  .man_stand{
+    position: absolute;
+      top: 170px;
+      left: 100px;
+      object-fit: cover;
+    
+  } */
+  
+  .gallery_grid{
+    /* background-color: black; */
+    text-align: center;
+    position: relative;
+    top:0;
+  }
+  
+  /*----------------------------------Animations---------------------------------*/
+  
+  .bounce-in-top {
+      -webkit-animation: bounce-in-top 1.1s both;
+              animation: bounce-in-top 1.1s both;
+  }
+  
+  .roll-in-left {
+      -webkit-animation: roll-in-left 0.6s ease-out both;
+              animation: roll-in-left 0.6s ease-out both;
+  }
+  
+  .roll-out-left {
+      -webkit-animation: roll-out-left 0.6s ease-in both;
+              animation: roll-out-left 0.6s ease-in both;
+  }
+  
+  .slide-in-blurred-top {
+      -webkit-animation: slide-in-blurred-top 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+              animation: slide-in-blurred-top 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+  }
+  
+  .slide-out-bck-center {
+      -webkit-animation: slide-out-bck-center 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+              animation: slide-out-bck-center 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  }
+  
+  /* ----------------------------------------------
+   * Generated by Animista on 2024-6-12 17:25:6
+   * Licensed under FreeBSD License.
+   * See http://animista.net/license for more info. 
+   * w: http://animista.net, t: @cssanimista
+   * ---------------------------------------------- */
+  
+  /**
+   * ----------------------------------------
+   * animation slide-out-bck-center
+   * ----------------------------------------
+   */
+   @-webkit-keyframes slide-out-bck-center {
+    0% {
+      -webkit-transform: translateZ(0);
+              transform: translateZ(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: translateZ(-1100px);
+              transform: translateZ(-1100px);
+      opacity: 0;
+    }
+  }
+  @keyframes slide-out-bck-center {
+    0% {
+      -webkit-transform: translate(-50%,0,0);
+              transform: translate(-50%,0,0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: translate(-50%,0,-1100px);
+              transform: translate(-50%,0,-1100px);
+      opacity: 0;
+    }
+  }
+  
+  /* ----------------------------------------------
+   * Generated by Animista on 2024-6-11 20:56:20
+   * Licensed under FreeBSD License.
+   * See http://animista.net/license for more info. 
+   * w: http://animista.net, t: @cssanimista
+   * ---------------------------------------------- */
+  
+  /**
+   * ----------------------------------------
+   * animation slide-in-blurred-top
+   * ----------------------------------------
+   */
+   @-webkit-keyframes slide-in-blurred-top {
+    0% {
+      -webkit-transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+              transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+      -webkit-transform-origin: 50% 0%;
+              transform-origin: 50% 0%;
+      -webkit-filter: blur(40px);
+              filter: blur(40px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0) scaleY(1) scaleX(1);
+              transform: translateY(0) scaleY(1) scaleX(1);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+      -webkit-filter: blur(0);
+              filter: blur(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slide-in-blurred-top {
+    0% {
+      -webkit-transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+              transform: translate(-50%,-1000px) scaleY(2.5) scaleX(0.2);
+      -webkit-transform-origin: 50% 0%;
+              transform-origin: 50% 0%;
+      -webkit-filter: blur(40px);
+              filter: blur(40px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0) scaleY(1) scaleX(1);
+              transform: translate(-50%,0) scaleY(1) scaleX(1);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+      -webkit-filter: blur(0);
+              filter: blur(0);
+      opacity: 1;
+    }
+  }
+  
+  
+  /* ----------------------------------------------
+   * Generated by Animista on 2024-6-4 18:43:31
+   * Licensed under FreeBSD License.
+   * See http://animista.net/license for more info. 
+   * w: http://animista.net, t: @cssanimista
+   * ---------------------------------------------- */
+  
+  /**
+   * ----------------------------------------
+   * animation roll-out-left
+   * ----------------------------------------
+   */
+   @-webkit-keyframes roll-out-left {
+    0% {
+      -webkit-transform: translateX(0) rotate(0deg);
+              transform: translateX(0) rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: translateX(-1000px) rotate(-540deg);
+              transform: translateX(-1000px) rotate(-540deg);
+      opacity: 0;
+    }
+  }
+  @keyframes roll-out-left {
+    0% {
+      -webkit-transform: translateX(0) rotate(0deg);
+              transform: translateX(0) rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: translateX(-1000px) rotate(-540deg);
+              transform: translateX(-1000px) rotate(-540deg);
+      opacity: 0;
+    }
+  }
+  
+  
+  /* ----------------------------------------------
+   * Generated by Animista on 2024-5-27 10:44:17
+   * Licensed under FreeBSD License.
+   * See http://animista.net/license for more info. 
+   * w: http://animista.net, t: @cssanimista
+   * ---------------------------------------------- */
+  
+  /**
+   * ----------------------------------------
+   * animation bounce-in-top
+   * ----------------------------------------
+   */
+   @-webkit-keyframes bounce-in-top {
+    0% {
+      -webkit-transform: translateY(-500px);
+              transform: translateY(-500px);
+              
+  
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+      opacity: 0;
+    }
+    38% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+              
+  
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+      opacity: 1;
+    }
+    55% {
+      -webkit-transform: translateY(-65px);
+              transform: translateY(-65px);
+              
+  
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    72% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+             
+  
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    81% {
+      -webkit-transform: translateY(-28px);
+              transform: translateY(-28px);
+             
+  
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    90% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+              
+  
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    95% {
+      -webkit-transform: translateY(-8px);
+              transform: translateY(-8px);
+              
+  
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+             
+  
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+  }
+  @keyframes bounce-in-top {
+    0% {
+      -webkit-transform: translateY(-500px);
+              transform: translate(-50%,-500px);
+             
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+      opacity: 0;
+    }
+    38% {
+      -webkit-transform: translateY(0);
+              transform: translate(-50%,-105%);
+              
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+      opacity: 1;
+    }
+    55% {
+      -webkit-transform: translateY(-65px);
+              transform: translate(-50%,-125%);
+              
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    72% {
+      -webkit-transform: translateY(0);
+              transform: translate(-50%,-105%);
+              
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    81% {
+      -webkit-transform: translateY(-28px);
+              transform: translate(-50%,-115%);
+              
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    90% {
+      -webkit-transform: translateY(0);
+              transform: translate(-50%,-105%);
+              
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    95% {
+      -webkit-transform: translateY(-8px);
+              transform: translate(-50%,-107%);
+             
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translate(-50%,-105%);
+              
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+  }
+  
+  /* ----------------------------------------------
+   * Generated by Animista on 2024-6-1 15:48:43
+   * Licensed under FreeBSD License.
+   * See http://animista.net/license for more info. 
+   * w: http://animista.net, t: @cssanimista
+   * ---------------------------------------------- */
+  
+  /**
+   * ----------------------------------------
+   * animation roll-in-left
+   * ----------------------------------------
+   */
+   @-webkit-keyframes roll-in-left {
+    0% {
+      -webkit-transform: translateX(-800px) rotate(-540deg);
+              transform: translateX(-800px) rotate(-540deg);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0) rotate(0deg);
+              transform: translateX(0) rotate(0deg);
+      opacity: 1;
+    }
+  }
+  @keyframes roll-in-left {
+    0% {
+      -webkit-transform: translateX(-800px) rotate(-540deg);
+              transform: translateX(-800px) rotate(-540deg);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0) rotate(0deg);
+              transform: translateX(0) rotate(0deg);
+      opacity: 1;
+    }
+  }
+  
+  
+  .swiper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+  }
+  
+  .swiper-slide img {
+    /* width: 70%; */
+    object-fit: cover;
+    /* height: 50vh; */
+    /* margin: 20px; */
+    box-shadow: -3px 2px 8px 6px rgba(19, 19, 19, 0.3);
+    /* border: 4px solid #3b3b3b;; */
+    border-radius: 4px;
+    
+  }
+  
+  @media screen and (min-width: 300px) {
+  
+    .logo {
+      height: 42px;
+      width: 84px;
+      }
+  
+    // .about_me{
+    //   transform: translate(0%, -9%);   /*for mobile */
+    //   border-radius: 40px;
+    //   background-color: #343434;
+    //   padding:15px ;
+    //   /* margin: 30px; */
+    //   text-align: center;
+    //   }
+  
+    .navbar {
+      direction: ltr;
+    }
+  
+    .header_title {
+      font-family: 'Ernest and Emily';
+      font-size:4vh;
+      color: rgb(249 201 131)
+      /* -webkit-text-stroke:1px #ffffff; */
+    }
+  
+    .gif_header{
+      width: 100%;
+      height: 32vh;
+      object-fit: cover;
+      margin-bottom: 20px;
+     }
+  
+    .navbar-expand .navbar-nav {
+      flex-direction: row;
+      display: none;
+  }
+  
+    .navbar_style{
+      display: none;
+    }
+  
+    .swipe_gif{
+      width: 150px;
+      position: absolute;
+      z-index: 1;
+      transform: translate(50%, -45%);
+    }
+  
+    .pic_carousel{
+      height: 17vh;
+      width: 80%;
+      margin:20px;
+      filter: brightness(30%);
+     }
+  
+     .clicked_pic_carousel {     
+      width: 82%; 
+      border: 4px solid #f5d0f5;
+      margin:10px; 
+      height: 21vh;
+  }
+  
+  .pic_carousel2{
+    width: calc(100% / 3);
+    flex-shrink: 0;
+    display: inline-block;
+    margin: 5px;
+   }
+  
+   .clicked_pic_carousel2 {     
+    width: calc(100% / 3);
+      flex-shrink: 0;
+      display: inline-block;
+  }
+  
+  .gallery_carousel {
+    height: 17vh;
+    width: calc(100% / 3);
+    flex-shrink: 0;
+    display: inline-block;
+    object-fit: cover;
+    filter: brightness(30%);
+    margin:10px; 
+  }
+  
+  .clicked_gallery_carousel {
+      height: 21vh;
+      width: calc(100% / 3);
+      object-fit: cover;
+      border: 4px solid #f5d0f5;
+  }
+  
+     .mockup_pic{
+      margin-top: 23px;
+      width: 100px;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 0);
+      /* z-index: 1; */
+      box-shadow: -3px 2px 8px 6px rgba(19, 19, 19, 0.3);
+      border: 3px solid #202020;
+      border-radius: 1px;
+    }
+  
+    .clicked_mockup_pic{
+      margin-top: 23px;
+      width: 100px;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 0);
+      /* z-index: 1; */
+      box-shadow: -3px 2px 8px 6px rgba(19, 19, 19, 0.3);
+      border: 3px solid #ffffff;
+    outline: 2px solid #0b0b0b;
+    border-radius: 1px;
+    }
+  
+    
+    .mockup_wall{
+      height:33vh;
+      position:relative;
+      text-Align:-webkit-center;
+      background: rgb(39,39,39);
+    //   background: linear-gradient(180deg, rgba(39,39,39,1) 0%, rgba(108,108,108,1) 22%, rgba(136,136,136,1) 37%, rgba(217,217,217,1) 75%, rgba(186,184,177,1) 100%);
+      
+    }
+  
+    .image-container {  /*wall mockup picture */
+      width: 100%; /* Set the desired width */
+      height: 32vh; /* Set the desired height */
+      background-image: url('http://www.uploads.co.il/uploads/images/963592288.jpg'); /* Set the background image */
+      background-size: cover; /* Ensure the image covers the container */
+      background-position: center; /* Center the image within the container */
+      background-repeat: no-repeat; /* Prevent the image from repeating */
+      overflow: hidden; /* Hide any overflowing content */
+      position: relative; /* Needed for absolute positioning of img */
+    }
+  
+    .mockup_sofa{
+      width: 230px;
+      position: absolute;
+      top: 95%;
+      left: 50%;
+      transform: translate(-50%, -105%);
+      /* z-index: 2; */
+      display: flex;
+      bottom: -16%;
+      -webkit-filter: drop-shadow(5px 5px 5px #222);
+        filter:         drop-shadow(5px 5px 5px #222); 
+    }
+  
+    .mockup_left_pot{
+      width: 12%;
+      position: absolute;
+      top: 95%;
+      left: 50%;
+      transform: translate(265%, -100%);
+      /* z-index: 2; */
+      display: flex;
+      bottom: -16%;
+      -webkit-filter: drop-shadow(5px 5px 5px #222);
+        filter:         drop-shadow(5px 5px 5px #222); 
+    }
+  
+    .mockup_floor_lamp{
+      width: 14%;
+      position: absolute;
+      top: 95%;
+      left: 50%;
+      transform: translate(123%, -52%);
+      /* z-index: 2; */
+      display: flex;
+      bottom: -16%;
+      -webkit-filter: drop-shadow(5px 5px 5px #222);
+        filter:         drop-shadow(5px 5px 5px #222); 
+    }
+  
+    .mockup_floor{
+      height: 7vh;
+      width: 100%;
+    }
+  
+    /* .video {
+      width: 10%;
+      height: 7vh;
+      object-fit: cover;
+      background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgba(255,255,255,1) 20%, rgba(255,255,255,0) 50%);
+    } */
+  
+    .about_me_text_p{
+      text-align: center;
+      font-size: 20px;
+    }
+  
+  
+  
+  }
+   @media screen and (min-width: 576px) {
+    .navbar {
+      direction: ltr;
+    }
+  
+    .header_title {
+      font-family: 'Ernest and Emily';
+      font-size:6vh;
+      color: rgb(249 201 131)
+      /* -webkit-text-stroke:1px #ffffff; */
+    }
+  
+    .gif_header{
+      width: 100%;
+      height: 45vh;
+      object-fit: cover;
+      margin-bottom: 20px;
+     }
+  
+    .pic_carousel{
+      height: 18vh;
+      width: 90%;
+     }
+  
+     .mockup_pic{
+      margin-top: 45px;
+      width: 150px;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 0);
+      /* z-index: 1; */
+      box-shadow: -3px 2px 8px 6px rgba(19, 19, 19, 0.3);
+      border: 4px solid #3b3b3b;;
+      border-radius: 4px;
+    }
+  
+    .mockup_wall{
+      height:43vh;
+      position:relative;
+      text-Align:-webkit-center;
+      background: rgb(39,39,39);
+    //   background: linear-gradient(180deg, rgba(39,39,39,1) 0%, rgba(108,108,108,1) 22%, rgba(136,136,136,1) 37%, rgba(217,217,217,1) 75%, rgba(186,184,177,1) 100%); 
+    }
+  
+    .image-container {  /*wall mockup picture */
+      width: 100%; /* Set the desired width */
+      height: 45vh; /* Set the desired height */
+      background-image: url('http://www.uploads.co.il/uploads/images/963592288.jpg'); /* Set the background image */
+      background-size: cover; /* Ensure the image covers the container */
+      background-position: center; /* Center the image within the container */
+      background-repeat: no-repeat; /* Prevent the image from repeating */
+      overflow: hidden; /* Hide any overflowing content */
+      position: relative; /* Needed for absolute positioning of img */
+    }
+  
+    .mockup_sofa{
+      width: 380px;
+      position: absolute;
+      top: 95%;
+      left: 50%;
+      transform: translate(-50%, -105%);
+      /* z-index: 2; */
+      display: flex;
+      bottom: -20%;
+      -webkit-filter: drop-shadow(5px 5px 5px #222);
+        filter:         drop-shadow(5px 5px 5px #222); 
+    }
+    .mockup_floor{
+      height: 13vh;
+      width: 100%;
+    }
+  
+    .about_me_text_p{
+      text-align: center;
+      font-size: 22px;
+    }
+  }
+  
+  @media screen and (min-width: 768px) {
+  
+    .navbar {
+      direction: rtl;
+    }
+  
+    .header_title {
+      font-family: 'Ernest and Emily';
+      font-size:7vh;
+      color: rgb(249 201 131)
+      /* -webkit-text-stroke:1px #ffffff; */
+    }
+  
+    .gif_header{
+      width: 100%;
+      height: 55vh;
+      object-fit: cover;
+      margin-bottom: 20px;
+     }
+  
+  
+    .navbar-expand .navbar-nav {
+      flex-direction: row;
+      display:ruby;
+  }
+  
+    .pic_carousel{
+      height: 22vh;
+      width: 95%;
+     }
+  
+     .mockup_pic{
+      margin-top: 45px;
+      width: 150px;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 0);
+      /* z-index: 1; */
+      box-shadow: -3px 2px 8px 6px rgba(19, 19, 19, 0.3);
+      border: 4px solid #3b3b3b;;
+      border-radius: 4px;
+    }
+  
+    .mockup_wall{
+      height:53vh;
+      position:relative;
+      text-Align:-webkit-center;
+      background: rgb(39,39,39);
+    //   background: linear-gradient(180deg, rgba(39,39,39,1) 0%, rgba(108,108,108,1) 22%, rgba(136,136,136,1) 37%, rgba(217,217,217,1) 75%, rgba(186,184,177,1) 100%);
+        }
+  
+        .image-container {  /*wall mockup picture */
+          width: 100%; /* Set the desired width */
+          height: 45vh; /* Set the desired height */
+          background-image: url('http://www.uploads.co.il/uploads/images/963592288.jpg'); /* Set the background image */
+          background-size: cover; /* Ensure the image covers the container */
+          background-position: center; /* Center the image within the container */
+          background-repeat: no-repeat; /* Prevent the image from repeating */
+          overflow: hidden; /* Hide any overflowing content */
+          position: relative; /* Needed for absolute positioning of img */
+        }
+  
+    .mockup_sofa{
+      width: 388px;
+      position: absolute;
+      top: 95%;
+      left: 50%;
+      transform: translate(-50%, -105%);
+      /* z-index: 2; */
+      display: flex;
+      bottom: -20%;
+      -webkit-filter: drop-shadow(5px 5px 5px #222);
+        filter:         drop-shadow(5px 5px 5px #222); 
+    }
+  
+    .mockup_floor{
+      height: 15vh;
+      width: 100%;
+    }
+    .about_me_text_p{
+      text-align: center;
+      font-size: 25px;
+    }
+  }
+  
+  @media screen and (min-width: 1250px) {
+  
+    .navbar {
+      direction: rtl;
+    }
+  
+    .header_title {
+      font-family: 'Ernest and Emily';
+      font-size:12vh;
+      color: rgb(249 201 131)
+      /* -webkit-text-stroke:1px #ffffff; */
+    }
+  
+    .gif_header{
+      width: 100%;
+      height: 85vh;
+      object-fit: cover;
+      margin-bottom: 20px;
+     }
+  
+    .navbar-expand .navbar-nav {
+      flex-direction: row;
+      display:ruby;
+  }
+  
+    .gallery_carousel {
+      height: 30vh;
+      width: calc(100% / 7);
+      flex-shrink: 0;
+      display: inline-block;
+      object-fit: cover;
+      filter: brightness(30%);
+      margin:10px; 
+    }
+    
+    .clicked_gallery_carousel {
+        height: 35vh;
+        width: calc(100% / 7);
+        object-fit: cover;
+        border: 4px solid #f5d0f5;
+    }
+  
+    .pic_carousel{
+      height: 25vh;
+      width: 100%;
+      margin:30px;
+      filter: brightness(40%);
+     }
+  
+     .clicked_pic_carousel { 
+      height: 25vh;    
+      width: 100%; 
+      border: 4px solid #f5d0f5;
+      margin:30px; 
+      
+  }
+  
+    .mockup_pic{
+    margin-top: 95px;
+    width: 220px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    box-shadow: -3px 2px 8px 6px rgba(19, 19, 19, 0.3);
+    border: 4px solid #3b3b3b;;
+    border-radius: 4px;
+  }
+  
+  .clicked_mockup_pic{
+    margin-top: 95px;
+    width: 220px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    box-shadow: -3px 2px 8px 6px rgba(19, 19, 19, 0.3);
+    border: 3px solid #ffffff;
+    outline: 2px solid #0b0b0b;
+    border-radius: 0px;
+  }
+  
+  .mockup_wall{
+    height:55vh;
+    position:relative;
+    text-Align:-webkit-center;
+    /* background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(189,189,189,1) 66%, rgba(167,163,146,1) 100%); */
+    background: rgb(39,39,39);
+//   background: linear-gradient(180deg, rgba(39,39,39,1) 0%, rgba(108,108,108,1) 22%, rgba(136,136,136,1) 37%, rgba(217,217,217,1) 75%, rgba(186,184,177,1) 100%);
+  }
+  
+  .image-container {  /*wall mockup picture */
+    width: 100%; /* Set the desired width */
+    height: 76vh; /* Set the desired height */
+    background-image: url('http://www.uploads.co.il/uploads/images/963592288.jpg'); /* Set the background image */
+    background-size: cover; /* Ensure the image covers the container */
+    background-position: center; /* Center the image within the container */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    overflow: hidden; /* Hide any overflowing content */
+    position: relative; /* Needed for absolute positioning of img */
+  }
+  
+  .mockup_sofa{
+    width: 620px;
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -105%);
+    /* z-index: 2; */
+    display: flex;
+    bottom: -20%;
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+      filter:         drop-shadow(5px 5px 5px #222); 
+  }
+  
+  .mockup_floor{
+    height: 14vh;
+    width: 100%;
+  }
+  
+  .about_me_text_p{
+    text-align: center;
+    font-size: 27px;
+  }
+  } 
+  
+  
+  
+  
+  
+  video {
+    width: 100%;
+    height: 75vh;
+    object-fit: cover;
+    // background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgba(255,255,255,1) 20%, rgba(255,255,255,0) 50%);
+  }
+  
+  
+  
+  
+  .mockup_description{
+    background-color: #fff6c2bb;
+    color: rgb(39, 39, 39);
+    border-color: aliceblue;
+    /* -webkit-text-stroke: 1px rgb(143, 31, 4);  */
+    font-size: 3vh;
+  }
+  
+  .pic_description{
+    /* position: relative; */
+    /* margin: 40px; */
+    text-align: center;
+  }
+  
+  
+  
+  .hexagon{
+    position: absolute;
+    /* margin: 30px; */
+  }
+  
+  .bg-dark {
+    --bs-bg-opacity: 1;
+    background-color: rgb(0 0 0) !important;
+  }
+  /* 
+  width={400} className='bounce-in-top' style={{bottom:'0',position:'absolute',left:'380',zIndex:"initial" */
+  
+  /* 
+    .header_title {
+      font-family: 'Ernest and Emily';
+      font-size:4vh;
+    } */
+  
+    .my_gallery{
+      padding-top: 60px;
+      background-color: #d6d6d6;    
+    //   background: linear-gradient(180deg, rgba(39,39,39,1) 0%, rgba(108,108,108,1) 22%, rgba(136,136,136,1) 37%, rgba(217,217,217,1) 75%, rgba(186,184,177,1) 100%);
+      //   background: rgb(39,39,39);
+    //   background: linear-gradient(180deg, rgba(39,39,39,1) 0%, rgba(108,108,108,1) 22%, rgba(136,136,136,1) 37%, rgba(217,217,217,1) 75%, rgba(186,184,177,1) 100%);
+
+
+    // background: linear-gradient(to bottom, #f7f7f7, #eaeaea) fixed; /* Subtle gradient for depth */
+    // background-size: cover;
+    // background-blend-mode: soft-light;
+    // background-color: #f4f4f4; /* Base wall color */
+    box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.1); /* Adds wall depth */
+      
+    }
+    
+    .my_gallery_pic{
+      margin: 1%;
+      margin-top: -75px;
+      position: relative;
+   
+      box-shadow: -9px 10px 20px rgba(0, 0, 0, 0.25), 0 6px 6px rgba(0, 0, 0, 0.22);
+      transition: box-shadow 0.3s ease-in-out;
+      border: 4px solid #3b3b3b;;
+      border-radius: 4px;
+    }
+
+    .my_gallery_pic:hover{
+        margin: 1%;
+        margin-top: -75px;
+        position: relative;
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.35), 0 10px 10px rgba(0, 0, 0, 0.22);
+        border: 4px solid #3b3b3b;;
+        border-radius: 4px;
+      }
+  
+      .artNoteName {
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+        transition: box-shadow 0.3s ease-in-out;
+        background-image: url('http://www.uploads.co.il/uploads/images/313913247.jpg');
+        background-size: cover; /* Ensures the image covers the entire element */
+        background-position: center; /* Centers the image */
+        background-repeat: no-repeat; /* Prevents tiling of the image */
+      }
+
+    .gallery-container {
+      width: 100%;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+  }
+  
+  .gallery {
+      margin: 5px;
+      display: flex;
+      /* height: 17vh; */
+  }
+  
+  
+  
+  @keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-100% / 3));
+    }
+  }
+
+  .carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px; /* Adjust based on your preference */
+    margin: 0 auto;
+  }
+  
+  .carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .carousel-image {
+    max-width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+  }
+  
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+  }
+  
+  .left-arrow {
+    left: 10px;
+  }
+  
+  .right-arrow {
+    right: 10px;
+  }
+  
+  .swipe_gif {
+    width: 100%;
+    max-width: 150px;
+    display: block;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .photo-on-wall {
+    display: inline-block;
+    // position: relative;
+    max-width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+    // transform: rotate(-2deg); /* Adds a slight tilt */
+    box-shadow: 
+     rgba(0, 0, 0, 0.9) 0px 2px 1px,
+     rgba(0, 0, 0, 0.09) 0px 4px 2px, 
+     rgba(0, 0, 0, 0.09) 0px 8px 4px, 
+     rgba(0, 0, 0, 0.02) 0px 16px 8px, 
+     rgba(0, 0, 0.0, 0.49) 5px 22px 19px;
+    border: 2px solid #1f1f1f; /* Simulates a photo border */
+    margin: 20px;
+    background: #fff;
+  }
+  .photo-on-wall::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 10px;
+    background: rgba(0, 0, 0, 0.3); /* Simulates a nail or hook shadow */
+    border-radius: 5px;
+  }
+
+  
