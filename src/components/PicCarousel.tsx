@@ -12,12 +12,12 @@ interface PicCarouselProps {
     name: string;
   }>;
   className:string;
-  setPicWidth: (width: string) => void;
-  setAnimateType: (type: "in" | "out") => void;
-  setMockupPic: (src: string) => void;
-  setMockupSofa: (sofa_url: string) => void;
-  setPicName: (name: string) => void;
-  setPicDescription: (description: string) => void;
+  setPicWidth?: (width: string) => void;
+  setAnimateType?: (type: "in" | "out") => void;
+  setMockupPic?: (src: string) => void;
+  setMockupSofa?: (sofa_url: string) => void;
+  setPicName?: (name: string) => void;
+  setPicDescription?: (description: string) => void;
 }
 
 const PicCarousel: React.FC<PicCarouselProps> = ({
@@ -43,9 +43,9 @@ const PicCarousel: React.FC<PicCarouselProps> = ({
   };
 
   // Update width on initial load
-  useEffect(() => {
-    setPicWidth("150px");
-  }, [setPicWidth]);
+//   useEffect(() => {
+//     setPicWidth("150px");
+//   }, [setPicWidth]);
 
   const currentItem = data[currentIndex];
   console.log(className)
@@ -60,15 +60,15 @@ const PicCarousel: React.FC<PicCarouselProps> = ({
             className={className}
             src={currentItem.src}
             alt={currentItem.title}
-            onClickCapture={() => setAnimateType("out")}
+            // onClickCapture={() => setAnimateType("out")}
             onClick={() => {
               const newWidth = currentItem.width >= currentItem.height ? "120px" : `${(140 * currentItem.width) / currentItem.height}px`;
-              setPicWidth(newWidth);
-              setPicDescription(currentItem.price[0].size);
-              setMockupPic(currentItem.src);
-              setMockupSofa(currentItem.sofa_url);
-              setPicName(currentItem.name);
-              setAnimateType("in");
+            //   setPicWidth(newWidth);
+            //   setPicDescription(currentItem.price[0].size);
+            //   setMockupPic(currentItem.src);
+            //   setMockupSofa(currentItem.sofa_url);
+            //   setPicName(currentItem.name);
+            //   setAnimateType("in");
             }}
           />
         </div>

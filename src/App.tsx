@@ -11,22 +11,21 @@ import NavbarComp from './components/Navbar';
 import { Col, Container, Row } from 'react-bootstrap';
 import AboutMe from './components/AboutMe';
 import MockupDescription from './components/MockupDescription';
-import Mockup from './components/Mockup';
 import PicCarousel from './components/PicCarousel';
-import Carousel from './components/Carousel';
 import Gallery from './components/Gallery';
-import Footer from './components/footer';
+import Footer from './components/Footer';
+
 
 function App() {
   const [paintings, setPaintings] = useState([]);
   const [sofas, setSofas] = useState([]);
   const [picName, setPicName] = useState('');
   const [picDescription, setPicDescription] = useState('');
-  const [mockupPic,setMockupPic]=useState("http://www.uploads.co.il/uploads/images/330658142.jpeg")
-  const [mockupSofa,setMockupSofa]=useState("http://www.uploads.co.il/uploads/images/248736505.png")
-  const [animate, setAnimate] = useState(false);
-  const [animateType, setAnimateType] = useState("in");
-  const[picWidth,setPicWidth]=useState('100')
+  // const [mockupPic,setMockupPic]=useState("http://www.uploads.co.il/uploads/images/330658142.jpeg")
+  // const [mockupSofa,setMockupSofa]=useState("http://www.uploads.co.il/uploads/images/248736505.png")
+  // const [animate, setAnimate] = useState(false);
+  // const [animateType, setAnimateType] = useState("in");
+  // const[picWidth,setPicWidth]=useState('100')
   const artist_pic = "http://www.uploads.co.il/uploads/images/973892682.png";
   
   useEffect(() => {
@@ -73,9 +72,9 @@ function App() {
         </Row>
 
             
-        {paintings.length>0 && <PicCarousel data={paintings} className={"photo-on-wall"}  setPicWidth={setPicWidth} setAnimateType={setAnimateType}  setMockupPic={setMockupPic} setMockupSofa={setMockupSofa} setPicName={setPicName}  setPicDescription={setPicDescription}/>}
+        {paintings.length>0 && <PicCarousel data={paintings} className={"photo-on-wall"}   setPicName={setPicName}  setPicDescription={setPicDescription}/>}
 
-        {sofas.length>0 &&<PicCarousel  data={sofas} className={"carousel-image"}  setPicWidth={setPicWidth} setAnimateType={setAnimateType}  setMockupPic={setMockupPic} setMockupSofa={setMockupSofa} setPicName={setPicName}  setPicDescription={setPicDescription}/>}
+        {sofas.length>0 &&<PicCarousel  data={sofas} className={"carousel-image"}   setPicName={setPicName}  setPicDescription={setPicDescription}/>}
 
          </div>
       <Container dir='rtl'>
