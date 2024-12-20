@@ -7,8 +7,9 @@
   "compilerOptions": {
     "skipLibCheck": true,
     "strict": false,
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
+    "noUnusedLocals": false, // Allow unused variables
+    "noUnusedParameters": false, // Allow unused parameters in functions
+    "noEmitOnError": false, // Continue build even with errors
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "moduleResolution": "node",
