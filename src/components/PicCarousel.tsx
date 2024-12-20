@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, } from "react";
 
 // Define the types for the props
 interface PicCarouselProps {
@@ -23,12 +23,12 @@ interface PicCarouselProps {
 const PicCarousel: React.FC<PicCarouselProps> = ({
   data,
   className,
-  setPicWidth,
-  setAnimateType,
-  setMockupPic,
-  setMockupSofa,
-  setPicName,
-  setPicDescription,
+//   setPicWidth,
+//   setAnimateType,
+//   setMockupPic,
+//   setMockupSofa,
+//   setPicName,
+//   setPicDescription,
 }) => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
 
@@ -62,7 +62,7 @@ const PicCarousel: React.FC<PicCarouselProps> = ({
             alt={currentItem.title}
             // onClickCapture={() => setAnimateType("out")}
             onClick={() => {
-              const newWidth = currentItem.width >= currentItem.height ? "120px" : `${(140 * currentItem.width) / currentItem.height}px`;
+            //   const newWidth = currentItem.width >= currentItem.height ? "120px" : `${(140 * currentItem.width) / currentItem.height}px`;
             //   setPicWidth(newWidth);
             //   setPicDescription(currentItem.price[0].size);
             //   setMockupPic(currentItem.src);
