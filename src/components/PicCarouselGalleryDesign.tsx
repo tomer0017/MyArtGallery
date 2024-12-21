@@ -12,6 +12,8 @@ interface PicCarouselProps {
     name: string;
   }>;
   className:string;
+  rightArrowClassName:string;
+  leftArrowClassName:string;
   setPicWidth?: (width: string) => void;
   setAnimateType?: (type: "in" | "out") => void;
   setMockupPic?: (src: string) => void;
@@ -23,6 +25,8 @@ interface PicCarouselProps {
 const PicCarouselGalleryDesign: React.FC<PicCarouselProps> = ({
   data,
   className,
+  rightArrowClassName,
+  leftArrowClassName,
 //   setPicWidth,
 //   setAnimateType,
 //   setMockupPic,
@@ -52,10 +56,10 @@ const PicCarouselGalleryDesign: React.FC<PicCarouselProps> = ({
   return (
     <>
       <div className="carousel-container">
-        <button className="arrow left-arrow" onClick={prevPic}>
+        <button className={`arrow ${leftArrowClassName}`} onClick={prevPic}>
           &lt;
         </button>
-        <img src="http://www.uploads.co.il/uploads/images/891510666.png" className="galleryLamp w-75 pt-5" />
+        <img src="http://www.uploads.co.il/uploads/images/673273003.png" className="galleryLamp width-60 pt-5" />
         <div className="carousel">
           <img
             className={className}
@@ -73,10 +77,10 @@ const PicCarouselGalleryDesign: React.FC<PicCarouselProps> = ({
             }}
           />
         </div>
-            <div className="artNoteName bg-light rounded-3 w-25 mx-auto mt-2">
+            {/* <div className="artNoteName bg-light rounded-3 w-25 mx-auto mt-2">
                 <p className="rubikBold fs-6 py-2 mx-2">{currentItem.name}</p>
-              </div>
-        <button className="arrow right-arrow" onClick={nextPic}>
+              </div> */}
+        <button className={`arrow ${rightArrowClassName}`} onClick={nextPic}>
           &gt;
         </button>
       </div>

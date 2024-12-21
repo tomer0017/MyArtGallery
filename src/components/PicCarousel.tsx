@@ -12,6 +12,8 @@ interface PicCarouselProps {
     name: string;
   }>;
   className:string;
+  rightArrowClassName:string;
+  leftArrowClassName:string;
   setPicWidth?: (width: string) => void;
   setAnimateType?: (type: "in" | "out") => void;
   setMockupPic?: (src: string) => void;
@@ -23,6 +25,8 @@ interface PicCarouselProps {
 const PicCarousel: React.FC<PicCarouselProps> = ({
   data,
   className,
+  rightArrowClassName,
+  leftArrowClassName,
 //   setPicWidth,
 //   setAnimateType,
 //   setMockupPic,
@@ -52,9 +56,6 @@ const PicCarousel: React.FC<PicCarouselProps> = ({
   return (
     <>
       <div className="carousel-container">
-        <button className="arrow left-arrow" onClick={prevPic}>
-          &lt;
-        </button>
         <div className="carousel">
           <img
             className={className}
@@ -72,8 +73,11 @@ const PicCarousel: React.FC<PicCarouselProps> = ({
             }}
           />
         </div>
-        <button className="arrow right-arrow" onClick={nextPic}>
+        <button className={`arrow ${rightArrowClassName}`} onClick={nextPic}>
           &gt;
+        </button>
+        <button className={`arrow ${leftArrowClassName}`}  onClick={prevPic}>
+          &lt;
         </button>
       </div>
 

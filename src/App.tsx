@@ -68,6 +68,7 @@ function App() {
       .catch((error) => console.error("Error fetching data:", error));
   }, []);
 
+
   return (
     <div>
       {/* <NavbarComp/>
@@ -103,7 +104,7 @@ function App() {
       borderRadius: "30px 30px 0px 0px",border:"1rem solid"}} width={"100%"}/>
       <Footer/> */}
 
-      {paintings.length>0 && <MobileView  links={links} artistPic={artist_pic} sofas={sofas} paintings={paintings}/> }
+      {paintings.length>0 && <MobileView links={links} artistPic={artist_pic} sofas={sofas} paintings={paintings}/> }
     </div>
   )
 }
