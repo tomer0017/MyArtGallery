@@ -37,6 +37,11 @@
     &-50{
         width: 50%;
     }
+
+    &-55{
+        width: 55%;
+    }
+
     &-60{
         width: 60%;
     }
@@ -1077,7 +1082,7 @@
   @media screen and (min-width: 1250px) {
   
     .carouselHeight{
-        height: 45vh;
+        height: 40vh;
     }
 
     .carousel-image {

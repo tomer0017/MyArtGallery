@@ -64,7 +64,7 @@ const PicCarouselGalleryDesign: React.FC<PicCarouselProps> = ({
         <button className={`arrow ${leftArrowClassName}`} onClick={prevPic}>
           &lt;
         </button>
-        <img src="http://www.uploads.co.il/uploads/images/622590044.png" className="galleryLamp width-60 pt-5" />
+        <img src="http://www.uploads.co.il/uploads/images/622590044.png" className="galleryLamp width-55 pt-5" />
         <div className="carousel carouselHeight">
           <img
             className={className}
