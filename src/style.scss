@@ -639,6 +639,16 @@
   }
   
   @media screen and (min-width: 300px) {
+
+    .below-left-arrow {
+        left: 120px;
+        margin-top: 55px;
+      }
+      
+      .below-right-arrow {
+        right: 120px;
+        margin-top: 55px;
+      }
   
     .carouselHeight{
            height: 30vh;
@@ -650,7 +660,7 @@
         max-width: 70%;
         object-fit: contain;
         position:absolute;
-        margin-bottom: 58px;
+        margin-bottom: 6vh;
       }
 
      
@@ -675,7 +685,7 @@
 
        .mockupWallTest{  /*wall mockup picture */
         width: 100%; /* Set the desired width */
-        height: 47vh; /* Set the desired height */
+        height: 45vh; /* Set the desired height */
         position: relative !important;
         // background-image: url('http://www.uploads.co.il/uploads/images/963592288.jpg'); /* Set the background image */
         background-size: cover; /* Ensure the image covers the container */
@@ -996,6 +1006,16 @@
   }
   
   @media screen and (min-width: 768px) {
+
+    .below-left-arrow {
+        left: 120px;
+        margin-top: 100px;
+      }
+      
+      .below-right-arrow {
+        right: 120px;
+        margin-top: 100px;
+      }
   
     .carouselHeight{
         height: 35vh;
@@ -1457,18 +1477,6 @@
     margin-top: 55px;
   }
 
-  .below-left-arrow {
-    left: 120px;
-    margin-top: 100px;
-  }
-  
-  .below-right-arrow {
-    right: 120px;
-    margin-top: 100px;
-  }
-  
-  
-
 
   .swipe_gif {
     width: 100%;
@@ -1524,7 +1532,7 @@
   }
 
   .linkContainer{
-    padding-top: 100px !important;
+    padding-top: 60px !important;
     padding-bottom: 50px !important;
   }
 
