@@ -56,6 +56,8 @@
    }
 
 
+
+
    .mockupWall {  /*wall mockup picture */
     width: 100%; /* Set the desired width */
     height: 82vh; /* Set the desired height */
@@ -647,7 +649,10 @@
         min-width: 90%;
         max-width: 70%;
         object-fit: contain;
+        position:absolute;
       }
+
+     
 
       .framedPainting {
         display: inline-block;
@@ -666,7 +671,19 @@
         margin-top: 60px;
         background: #fff;
       }
-      
+
+       .mockupWallTest{  /*wall mockup picture */
+        width: 100%; /* Set the desired width */
+        height: 47vh; /* Set the desired height */
+        position: relative !important;
+        // background-image: url('http://www.uploads.co.il/uploads/images/963592288.jpg'); /* Set the background image */
+        background-size: cover; /* Ensure the image covers the container */
+        background-position: center; /* Center the image within the container */
+        background-repeat: no-repeat; /* Prevent the image from repeating */
+        overflow: hidden; /* Hide any overflowing content */
+        position: relative; /* Needed for absolute positioning of img */
+      }
+
     .logo {
       height: 42px;
       width: 84px;
@@ -888,6 +905,18 @@
         background: #fff;
       }
 
+      .mockupWallTest{  /*wall mockup picture */
+        width: 100%; /* Set the desired width */
+        height: 54vh; /* Set the desired height */
+        position: relative !important;
+        // background-image: url('http://www.uploads.co.il/uploads/images/963592288.jpg'); /* Set the background image */
+        background-size: cover; /* Ensure the image covers the container */
+        background-position: center; /* Center the image within the container */
+        background-repeat: no-repeat; /* Prevent the image from repeating */
+        overflow: hidden; /* Hide any overflowing content */
+        position: relative; /* Needed for absolute positioning of img */
+      }
+
     .navbar {
       direction: ltr;
     }
@@ -994,6 +1023,18 @@
     border: 2px solid #1f1f1f; /* Simulates a photo border */
     margin-top: 40px;
     background: #fff;
+  }
+
+  .mockupWallTest{  /*wall mockup picture */
+    width: 100%; /* Set the desired width */
+    height: 60vh; /* Set the desired height */
+    position: relative !important;
+    // background-image: url('http://www.uploads.co.il/uploads/images/963592288.jpg'); /* Set the background image */
+    background-size: cover; /* Ensure the image covers the container */
+    background-position: center; /* Center the image within the container */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    overflow: hidden; /* Hide any overflowing content */
+    position: relative; /* Needed for absolute positioning of img */
   }
 
     .navbar {
@@ -1108,6 +1149,18 @@
         border: 2px solid #1f1f1f; /* Simulates a photo border */
         margin-top: 40px;
         background: #fff;
+      }
+
+      .mockupWallTest{  /*wall mockup picture */
+        width: 100%; /* Set the desired width */
+        height: 70vh; /* Set the desired height */
+        position: relative !important;
+        // background-image: url('http://www.uploads.co.il/uploads/images/963592288.jpg'); /* Set the background image */
+        background-size: cover; /* Ensure the image covers the container */
+        background-position: center; /* Center the image within the container */
+        background-repeat: no-repeat; /* Prevent the image from repeating */
+        overflow: hidden; /* Hide any overflowing content */
+        position: relative; /* Needed for absolute positioning of img */
       }
 
     .navbar {
@@ -1363,6 +1416,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 60px;
   }
   
   

@@ -65,18 +65,20 @@ export const MobileView: React.FC<MobileViewProps> = ({ links,sofas,paintings,ar
       console.log(selectedTexture)
   return (
     
-< div className="text-center pt-4 "  style={
+< div className="text-center pt-4 " >
+  <img src={artistPic} className="circleAvatar width-40"/> 
+  <h2 className="fs-3 pt-2 pb-2 mt-4 mb-5 bg-body rubikRegular text-secondary">Tomer_Cohen_Art</h2>
+    <div className="pb-3">
+    <ColorPicker setSelectedColor={setSelectedColor} setSelectedTexture={setSelectedTexture} colors={wallColorsOptions}/>
+    <TexturePicker setSelectedTexture={setSelectedTexture} textures={wallTextureOptions}/>
+    </div>
+  <div className="mockupWallTest" style={
     selectedTexture
       ? { backgroundImage: `url(${selectedTexture})`, backgroundSize: "cover", backgroundPosition: "center" }
       : { backgroundColor: selectedColor }
   }>
-  <img src={artistPic} className="circleAvatar width-40"/> 
-  <h2 className="fs-3 pt-2 pb-2 mt-4 mb-5 bg-body rubikRegular text-secondary">Tomer_Cohen_Art</h2>
-
-  <ColorPicker setSelectedColor={setSelectedColor} setSelectedTexture={setSelectedTexture} colors={wallColorsOptions}/>
-  <TexturePicker setSelectedTexture={setSelectedTexture} textures={wallTextureOptions}/>
-    
   {paintings.length>0 && <PicCarouselGalleryDesign rightArrowClassName={'side-right-arrow'}leftArrowClassName={'side-left-arrow'} data={paintings} className={"framedPainting"} />}
+    </div>  
 
   {paintings.length>0 && <PicCarousel rightArrowClassName={'below-right-arrow'}leftArrowClassName={'below-left-arrow'} data={sofas} className={"carousel-image"} />}
   <div className=" linkContainer">
