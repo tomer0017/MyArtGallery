@@ -3,6 +3,7 @@ import React from "react";
 interface ColorPickerProps {
   colors?:any;
   setSelectedColor: (color: string) => void;
+  setSelectedTexture?: (url: string) => void;
   artistPic?:string;
 }
 
@@ -11,7 +12,7 @@ interface ColorProp {
     color: string;
   }
 
-export const ColorPicker: React.FC<ColorPickerProps> = ({colors,setSelectedColor}) => {
+export const ColorPicker: React.FC<ColorPickerProps> = ({colors,setSelectedColor,setSelectedTexture}) => {
   return (
     < div className="text-center">
     {colors.length>0 && colors.map((color:ColorProp, index: number)=>{
@@ -19,7 +20,12 @@ export const ColorPicker: React.FC<ColorPickerProps> = ({colors,setSelectedColor
         return (
           <span
           key={index}
-          onClick={() => setSelectedColor(color.color)}
+          onClick={() => {
+            setSelectedColor(color.color);
+            if (setSelectedTexture) {
+              setSelectedTexture("");
+            }
+          }}
           style={{
             display: "inline-block",
             width: "30px",

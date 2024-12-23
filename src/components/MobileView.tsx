@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import PicCarouselGalleryDesign from "./PicCarouselGalleryDesign";
 import PicCarousel from "./PicCarousel";
 import ColorPicker from "./ColorPicker";
+import TexturePicker from "./TexturePicker";
 
 interface MobileViewProps {
   sofas?: any;
@@ -21,6 +22,8 @@ interface LinkProp {
 export const MobileView: React.FC<MobileViewProps> = ({ links,sofas,paintings,artistPic }) => {
     const [wallColorsOptions,setWallColorOptions] = useState([]);
     const [selectedColor, setSelectedColor] = useState<string>("#d6d6d6");
+    const [wallTextureOptions,setWallTextureOptions] = useState([]);
+    const [selectedTexture, setSelectedTexture] = useState<string>("");
 
     const [wallColor,setWallColor] = useState('#d6d6d6');
   
@@ -41,14 +44,38 @@ export const MobileView: React.FC<MobileViewProps> = ({ links,sofas,paintings,ar
   
       fetchColors();
     }, []);
+
+    useEffect(() => {
+        const fetchColors = async () => {
+          try {
+            const response = await fetch("/textures.json");
+            if (!response.ok) {
+              throw new Error(`Failed to fetch colors.json: ${response.status}`);
+            }
+            const data = await response.json();
+            setWallTextureOptions(data);
+          } catch (err: any) {
+            console.error("Error fetching colors:", err);
+          }
+        };
+    
+        fetchColors();
+      }, []);
+
+      console.log(selectedTexture)
   return (
     
-< div className="text-center pt-4 " style={{backgroundColor:selectedColor}}>
+< div className="text-center pt-4 "  style={
+    selectedTexture
+      ? { backgroundImage: `url(${selectedTexture})`, backgroundSize: "cover", backgroundPosition: "center" }
+      : { backgroundColor: selectedColor }
+  }>
   <img src={artistPic} className="circleAvatar width-40"/> 
   <h2 className="fs-3 pt-2 pb-2 mt-4 mb-5 bg-body rubikRegular text-secondary">Tomer_Cohen_Art</h2>
 
-  <ColorPicker setSelectedColor={setSelectedColor} colors={wallColorsOptions}/>
-
+  <ColorPicker setSelectedColor={setSelectedColor} setSelectedTexture={setSelectedTexture} colors={wallColorsOptions}/>
+  <TexturePicker setSelectedTexture={setSelectedTexture} textures={wallTextureOptions}/>
+    
   {paintings.length>0 && <PicCarouselGalleryDesign rightArrowClassName={'side-right-arrow'}leftArrowClassName={'side-left-arrow'} data={paintings} className={"framedPainting"} />}
 
   {paintings.length>0 && <PicCarousel rightArrowClassName={'below-right-arrow'}leftArrowClassName={'below-left-arrow'} data={sofas} className={"carousel-image"} />}
