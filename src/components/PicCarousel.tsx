@@ -27,6 +27,7 @@ const PicCarousel: React.FC<PicCarouselProps> = ({
   className,
   rightArrowClassName,
   leftArrowClassName,
+  setAnimateType,
 //   setPicWidth,
 //   setAnimateType,
 //   setMockupPic,
@@ -44,6 +45,9 @@ const PicCarousel: React.FC<PicCarouselProps> = ({
   // Go to the next picture
   const nextPic = () => {
     setCurrentIndex((prevIndex) => (prevIndex === data.length - 1 ? 0 : prevIndex + 1));
+    // if (setAnimateType) {
+    //     setAnimateType("out");
+    // }
   };
 
   // Update width on initial load
@@ -58,7 +62,7 @@ const PicCarousel: React.FC<PicCarouselProps> = ({
       <div className="carousel-container">
         <div className="carousel">
           <img
-            className={className}
+            className={className }
             src={currentItem.src}
             alt={currentItem.title}
             // onClickCapture={() => setAnimateType("out")}
