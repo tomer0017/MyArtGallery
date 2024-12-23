@@ -49,7 +49,7 @@ export const MobileView: React.FC<MobileViewProps> = ({ links,sofas,paintings,ar
 
   <ColorPicker setSelectedColor={setSelectedColor} colors={wallColorsOptions}/>
 
-  {paintings.length>0 && <PicCarouselGalleryDesign rightArrowClassName={'side-right-arrow'}leftArrowClassName={'side-left-arrow'} data={paintings} className={"photo-on-wall"} />}
+  {paintings.length>0 && <PicCarouselGalleryDesign rightArrowClassName={'side-right-arrow'}leftArrowClassName={'side-left-arrow'} data={paintings} className={"framedPainting"} />}
 
   {paintings.length>0 && <PicCarousel rightArrowClassName={'below-right-arrow'}leftArrowClassName={'below-left-arrow'} data={sofas} className={"carousel-image"} />}
   <div className=" linkContainer">

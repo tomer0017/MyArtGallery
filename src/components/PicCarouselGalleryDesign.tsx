@@ -1,4 +1,4 @@
-import React, { useState, } from "react";
+import React, { useEffect, useState, } from "react";
 
 // Define the types for the props
 interface PicCarouselProps {
@@ -35,7 +35,7 @@ const PicCarouselGalleryDesign: React.FC<PicCarouselProps> = ({
 //   setPicDescription,
 }) => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
-
+  const [responsivePicWidth,setResponsivePicWidth]=useState('')
   // Go to the previous picture
   const prevPic = () => {
     setCurrentIndex((prevIndex) => (prevIndex === 0 ? data.length - 1 : prevIndex - 1));
@@ -46,12 +46,17 @@ const PicCarouselGalleryDesign: React.FC<PicCarouselProps> = ({
     setCurrentIndex((prevIndex) => (prevIndex === data.length - 1 ? 0 : prevIndex + 1));
   };
 
+  const currentItem = data[currentIndex];
   // Update width on initial load
 //   useEffect(() => {
 //     setPicWidth("150px");
 //   }, [setPicWidth]);
-
-  const currentItem = data[currentIndex];
+  useEffect(()=>{
+    setResponsivePicWidth((currentItem.width>=currentItem.height) ? 
+    (140*(4*window.innerWidth/3525+0.557447)).toString()+'px' : 
+    ((190*currentItem.width/currentItem.height*(4*window.innerWidth/3525+0.557447)).toString()+'px'))
+    
+  },[currentIndex])
   console.log(className)
   return (
     <>
@@ -59,15 +64,16 @@ const PicCarouselGalleryDesign: React.FC<PicCarouselProps> = ({
         <button className={`arrow ${leftArrowClassName}`} onClick={prevPic}>
           &lt;
         </button>
-        <img src="http://www.uploads.co.il/uploads/images/673273003.png" className="galleryLamp width-60 pt-5" />
-        <div className="carousel">
+        <img src="http://www.uploads.co.il/uploads/images/622590044.png" className="galleryLamp width-60 pt-5" />
+        <div className="carousel carouselHeight">
           <img
             className={className}
+            style={{maxWidth:responsivePicWidth=='0px'?'120px':responsivePicWidth}}
             src={currentItem.src}
             alt={currentItem.title}
             // onClickCapture={() => setAnimateType("out")}
             onClick={() => {
-            //   const newWidth = currentItem.width >= currentItem.height ? "120px" : `${(140 * currentItem.width) / currentItem.height}px`;
+              const newWidth = currentItem.width >= currentItem.height ? "150px" : `${(140 * currentItem.width) / currentItem.height}px`;
             //   setPicWidth(newWidth);
             //   setPicDescription(currentItem.price[0].size);
             //   setMockupPic(currentItem.src);
