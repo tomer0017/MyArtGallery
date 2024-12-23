@@ -45,7 +45,7 @@ export const MobileView: React.FC<MobileViewProps> = ({ links,sofas,paintings,ar
     
 < div className="text-center pt-4 " style={{backgroundColor:selectedColor}}>
   <img src={artistPic} className="circleAvatar width-40"/> 
-  <h2 className="fs-5 pt-2 pb-5">Tomer_Cohen_Art</h2>
+  <h2 className="fs-3 pt-2 pb-2 mt-4 mb-5 bg-body rubikRegular text-secondary">Tomer_Cohen_Art</h2>
 
   <ColorPicker setSelectedColor={setSelectedColor} colors={wallColorsOptions}/>
 
@@ -65,7 +65,7 @@ export const MobileView: React.FC<MobileViewProps> = ({ links,sofas,paintings,ar
             >
             <div>
                 {link.icon && <i className={link.icon}></i>}
-                <span className="text-light">{link.name}</span>
+                <span className="text-dark">{link.name}</span>
             </div>
             </button>
         </div>
