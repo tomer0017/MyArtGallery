@@ -24,7 +24,6 @@ export const MobileView: React.FC<MobileViewProps> = ({ links,sofas,paintings,ar
     const [selectedColor, setSelectedColor] = useState<string>("#d6d6d6");
     const [wallTextureOptions,setWallTextureOptions] = useState([]);
     const [selectedTexture, setSelectedTexture] = useState<string>("");
-    const [animate, setAnimate] = useState(false);
     const [animateType, setAnimateType] = useState("in");
 
     const [wallColor,setWallColor] = useState('#d6d6d6');
@@ -64,7 +63,6 @@ export const MobileView: React.FC<MobileViewProps> = ({ links,sofas,paintings,ar
         fetchColors();
       }, []);
 
-      console.log(selectedTexture)
   return (
     
 < div className="text-center pt-4 " >
@@ -82,7 +80,8 @@ export const MobileView: React.FC<MobileViewProps> = ({ links,sofas,paintings,ar
   {paintings.length>0 && <PicCarouselGalleryDesign rightArrowClassName={'side-right-arrow'}leftArrowClassName={'side-left-arrow'} data={paintings} className={"framedPainting"} />}
     </div>  
 
-  {paintings.length>0 && <PicCarousel setAnimateType={setAnimateType} rightArrowClassName={'below-right-arrow'}leftArrowClassName={'below-left-arrow'} data={sofas} className={`carousel-image ${true ? animateType === 'in' ? 'bounce-in-top' : 'slide-out-bck-center' : ''}`} />}
+  {
+  paintings.length>0 && <PicCarousel setAnimateType={setAnimateType} animateType={animateType} rightArrowClassName={'below-right-arrow'}leftArrowClassName={'below-left-arrow'} data={sofas} className={"carousel-image"}/>}
   <div className=" linkContainer">
     {links.length>0 && links.map((link:LinkProp)=>{
         

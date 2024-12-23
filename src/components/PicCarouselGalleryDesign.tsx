@@ -28,7 +28,7 @@ const PicCarouselGalleryDesign: React.FC<PicCarouselProps> = ({
   rightArrowClassName,
   leftArrowClassName,
 //   setPicWidth,
-//   setAnimateType,
+  setAnimateType,
 //   setMockupPic,
 //   setMockupSofa,
 //   setPicName,
@@ -57,7 +57,8 @@ const PicCarouselGalleryDesign: React.FC<PicCarouselProps> = ({
     ((190*currentItem.width/currentItem.height*(4*window.innerWidth/3525+0.557447)).toString()+'px'))
     
   },[currentIndex])
-  console.log(className)
+
+
   return (
     <>
       <div className="carousel-container">

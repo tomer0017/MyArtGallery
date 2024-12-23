@@ -1,4 +1,4 @@
-import React, { useState, } from "react";
+import React, { useEffect, useState, } from "react";
 
 // Define the types for the props
 interface PicCarouselProps {
@@ -14,6 +14,7 @@ interface PicCarouselProps {
   className:string;
   rightArrowClassName:string;
   leftArrowClassName:string;
+  animateType:string;
   setPicWidth?: (width: string) => void;
   setAnimateType?: (type: "in" | "out") => void;
   setMockupPic?: (src: string) => void;
@@ -27,6 +28,7 @@ const PicCarousel: React.FC<PicCarouselProps> = ({
   className,
   rightArrowClassName,
   leftArrowClassName,
+  animateType,
   setAnimateType,
 //   setPicWidth,
 //   setAnimateType,
@@ -36,7 +38,7 @@ const PicCarousel: React.FC<PicCarouselProps> = ({
 //   setPicDescription,
 }) => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
-
+  const [animate, setAnimate] = useState(true);
   // Go to the previous picture
   const prevPic = () => {
     setCurrentIndex((prevIndex) => (prevIndex === 0 ? data.length - 1 : prevIndex - 1));
@@ -44,25 +46,35 @@ const PicCarousel: React.FC<PicCarouselProps> = ({
 
   // Go to the next picture
   const nextPic = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === data.length - 1 ? 0 : prevIndex + 1));
-    // if (setAnimateType) {
-    //     setAnimateType("out");
-    // }
+        setCurrentIndex((prevIndex) =>
+          prevIndex === data.length - 1 ? 0 : prevIndex + 1 )
+
   };
 
-  // Update width on initial load
 //   useEffect(() => {
-//     setPicWidth("150px");
-//   }, [setPicWidth]);
+//     if(setAnimateType){
+//         setAnimateType("out");
+//     }
+//   }, [animate]);
+
+//   useEffect(() => {
+//     const timer = setTimeout(() => {
+//       setCurrentIndex((prevIndex) =>
+//         prevIndex === data.length - 1 ? 0 : prevIndex + 1
+//       );
+//     }, 500);
+  
+//     return () => clearTimeout(timer); 
+//   }, [animate]);
+  
 
   const currentItem = data[currentIndex];
-  console.log(className)
   return (
     <>
       <div className="carousel-container">
         <div className="carousel">
           <img
-            className={className }
+            className={`${className} ${ animate ? animateType === 'in' ? 'bounce-in-top' : 'slide-out-bck-center' : ''}`  }
             src={currentItem.src}
             alt={currentItem.title}
             // onClickCapture={() => setAnimateType("out")}
