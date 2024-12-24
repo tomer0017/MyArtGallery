@@ -72,16 +72,20 @@ export const MobileView: React.FC<MobileViewProps> = ({ links,sofas,paintings,ar
     <ColorPicker setSelectedColor={setSelectedColor} setSelectedTexture={setSelectedTexture} colors={wallColorsOptions}/>
     <TexturePicker setSelectedTexture={setSelectedTexture} textures={wallTextureOptions}/>
     </div>
-  <div className="mockupWallTest" style={
+  <div style={
     selectedTexture
-      ? { backgroundImage: `url(${selectedTexture})`, backgroundSize: "cover", backgroundPosition: "center" }
-      : { backgroundColor: selectedColor }
-  }>
+      ? { backgroundImage: `url(${selectedTexture})`, backgroundSize: "cover", backgroundPosition: "center",paddingBottom: '60px' }
+      : { backgroundColor: selectedColor, paddingBottom: '100px' }
+  }> 
+  <div className="mockupWallTest" >
   {paintings.length>0 && <PicCarouselGalleryDesign rightArrowClassName={'side-right-arrow'}leftArrowClassName={'side-left-arrow'} data={paintings} className={"framedPainting"} />}
     </div>  
 
   {
   paintings.length>0 && <PicCarousel setAnimateType={setAnimateType} animateType={animateType} rightArrowClassName={'below-right-arrow'}leftArrowClassName={'below-left-arrow'} data={sofas} className={"carousel-image"}/>}
+
+</div> 
+
   <div className=" linkContainer">
     {links.length>0 && links.map((link:LinkProp)=>{
         
@@ -95,7 +99,7 @@ export const MobileView: React.FC<MobileViewProps> = ({ links,sofas,paintings,ar
             >
             <div>
                 {link.icon && <i className={link.icon}></i>}
-                <span className="text-dark">{link.name}</span>
+                <span className="text-light">{link.name}</span>
             </div>
             </button>
         </div>
