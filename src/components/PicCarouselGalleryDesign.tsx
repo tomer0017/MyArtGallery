@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import { gsap } from "gsap";
 
-// Define the types for the props
 interface PicCarouselProps {
   data: Array<{
     src: string;
@@ -32,6 +31,7 @@ const PicCarouselGalleryDesign: React.FC<PicCarouselProps> = ({
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [responsivePicWidth, setResponsivePicWidth] = useState("");
   const imgRef = useRef<HTMLImageElement | null>(null);
+  const lampImgRef = useRef<HTMLImageElement | null>(null); // Ref for the second image
 
   // Go to the previous picture
   const prevPic = () => {
@@ -62,17 +62,25 @@ const PicCarouselGalleryDesign: React.FC<PicCarouselProps> = ({
     );
   }, [currentIndex, currentItem.width, currentItem.height]);
 
-  // GSAP Animation
+  // GSAP Animation for the main image
   useEffect(() => {
     if (imgRef.current) {
-      // Apply GSAP animation on the image
       gsap.fromTo(
         imgRef.current,
-        { rotationY: -90, opacity: 0 },
-        { rotationY: 0, opacity: 1, duration: 0.7, ease: "power2.out" }
+        { scale: 0.2, rotate: -700, opacity: 0 },
+        { scale: 1, rotate: 0, opacity: 1, duration: 0.5, ease: "power2.out" }
       );
     }
-  }, [currentIndex]); // Run animation whenever the currentIndex changes
+
+    // GSAP Animation for the lamp image
+    if (lampImgRef.current) {
+      gsap.fromTo(
+        lampImgRef.current,
+        { opacity: 0.4 },
+        { opacity: 1, duration: 0.6, ease: "power2.out" }
+      );
+    }
+  }, [currentIndex]); // Re-run animation when the currentIndex changes
 
   return (
     <>
@@ -81,6 +89,7 @@ const PicCarouselGalleryDesign: React.FC<PicCarouselProps> = ({
           &lt;
         </button>
         <img
+          ref={lampImgRef} // Add ref to the second image
           src="http://www.uploads.co.il/uploads/images/622590044.png"
           className="galleryLamp width-55 pt-4"
         />
