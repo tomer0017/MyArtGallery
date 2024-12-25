@@ -1,10 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-// Register ScrollTrigger
-gsap.registerPlugin(ScrollTrigger);
-
+// Define the types for the props
 interface PicCarouselProps {
   data: Array<{
     src: string;
@@ -36,30 +33,24 @@ const PicCarouselGalleryDesign: React.FC<PicCarouselProps> = ({
   const [responsivePicWidth, setResponsivePicWidth] = useState("");
   const imgRef = useRef<HTMLImageElement | null>(null);
 
-  // GSAP ScrollTrigger Animation for the image
-  useEffect(() => {
-    if (imgRef.current) {
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: imgRef.current,
-          scrub: 1,
-          pin: false,
-          start: "top 80%", // Start animation when 80% of the image is in the viewport
-          end: "bottom 20%", // End animation when 20% of the image is in the viewport
-        },
-      });
+  // Go to the previous picture
+  const prevPic = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? data.length - 1 : prevIndex - 1
+    );
+  };
 
-      tl.fromTo(
-        imgRef.current,
-        { opacity: 0, scale: 0.8, rotateY: -90 }, // Start state
-        { opacity: 1, scale: 1, rotateY: 0, duration: 1 } // End state
-      );
-    }
-  }, [currentIndex]);
+  // Go to the next picture
+  const nextPic = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === data.length - 1 ? 0 : prevIndex + 1
+    );
+  };
 
-  // Responsive width calculation
+  const currentItem = data[currentIndex];
+
+  // Update responsive width
   useEffect(() => {
-    const currentItem = data[currentIndex];
     setResponsivePicWidth(
       currentItem.width >= currentItem.height
         ? (140 * (4 * window.innerWidth / 3525 + 0.557447)).toString() + "px"
@@ -69,22 +60,19 @@ const PicCarouselGalleryDesign: React.FC<PicCarouselProps> = ({
             (4 * window.innerWidth / 3525 + 0.557447)
           ).toString() + "px"
     );
-  }, [currentIndex]);
+  }, [currentIndex, currentItem.width, currentItem.height]);
 
-  // Change picture
-  const prevPic = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? data.length - 1 : prevIndex - 1
-    );
-  };
-
-  const nextPic = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === data.length - 1 ? 0 : prevIndex + 1
-    );
-  };
-
-  const currentItem = data[currentIndex];
+  // GSAP Animation
+  useEffect(() => {
+    if (imgRef.current) {
+      // Apply GSAP animation on the image
+      gsap.fromTo(
+        imgRef.current,
+        { rotationY: -90, opacity: 0 },
+        { rotationY: 0, opacity: 1, duration: 0.7, ease: "power2.out" }
+      );
+    }
+  }, [currentIndex]); // Run animation whenever the currentIndex changes
 
   return (
     <>
