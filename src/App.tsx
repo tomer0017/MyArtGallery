@@ -13,6 +13,8 @@ import PicCarousel from './components/PicCarousel';
 import Gallery from './components/Gallery';
 import Footer from './components/Footer';
 import MobileView from './components/MobileView';
+import "@fortawesome/fontawesome-free/css/all.min.css";
+
 
 
 function App() {

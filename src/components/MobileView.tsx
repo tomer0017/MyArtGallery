@@ -97,10 +97,10 @@ export const MobileView: React.FC<MobileViewProps> = ({ links,sofas,paintings,ar
             style={{ backgroundColor: link.color }}
             onClick={() => window.open(link.link, "_blank")}
             >
-            <div>
-                {link.icon && <i className={link.icon}></i>}
-                <span className="text-light">{link.name}</span>
-            </div>
+                <div className="d-flex align-items-center justify-content-start">
+                    {link.icon && <i className={`${link.icon} me-2`}></i>}
+                    <span className="text-light text-center" style={{ flex: 1 }}>{link.name}</span>
+                </div>
             </button>
         </div>
         );
