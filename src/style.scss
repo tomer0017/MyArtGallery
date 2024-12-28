@@ -1177,12 +1177,12 @@
 
   .side-left-arrow-full-screen{
     left: 10px;
-    margin-top: 20px;
+    margin-top: 45px;
   }
   
   .side-right-arrow-full-screen{
     right: 10px;
-    margin-top: 20px;
+    margin-top: 45px;
   }
 
 
@@ -1241,6 +1241,11 @@
 
   .linkContainer{
     padding-top: 115px !important;
+    padding-bottom: 50px !important;
+  }
+
+  .linkContainerFullScreen{
+    padding-top: 50px !important;
     padding-bottom: 50px !important;
   }
 

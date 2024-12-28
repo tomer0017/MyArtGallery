@@ -110,7 +110,7 @@ export const MobileView: React.FC<MobileViewProps> = ({ links,sofas,paintings,ar
 
 
 
-  <div className=" linkContainer">
+  <div className=" linkContainerFullScreen">
     {links.length>0 && links.map((link:LinkProp)=>{
         
         return (
