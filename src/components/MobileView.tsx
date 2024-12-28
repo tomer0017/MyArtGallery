@@ -95,8 +95,8 @@ export const MobileView: React.FC<MobileViewProps> = ({ links,sofas,paintings,ar
 {/* OPTION2- ONLY LAMP&PAINTING */}
 <div style={
     selectedTexture
-      ? { backgroundImage: `url(${selectedTexture})`, backgroundSize: "cover", backgroundPosition: "center",paddingBottom: '60px' }
-      : { backgroundColor: selectedColor, paddingBottom: '100px' }
+      ? { backgroundImage: `url(${selectedTexture})`, backgroundSize: "cover", backgroundPosition: "center",paddingBottom: '20px' }
+      : { backgroundColor: selectedColor, paddingBottom: '20px' }
   }> 
     {paintings.length>0 && <PaintingWithLampFullSizeCarousel rightArrowClassName={'side-right-arrow'}leftArrowClassName={'side-left-arrow'} data={paintings} className={"framedPaintingFullSize"} />}
 

@@ -45,6 +45,16 @@
     &-60{
         width: 60%;
     }
+    &-65{
+        width: 65%;
+    }
+    &-70{
+        width: 70%;
+    }
+
+    &-80{
+        width: 80%;
+    }
   }
   
 
@@ -97,6 +107,10 @@
 
 .galleryLamp{
     margin-bottom: -100px !important;
+}
+
+.galleryLampFullSize{
+    margin-bottom: -60px !important;
 }
 
 .App {

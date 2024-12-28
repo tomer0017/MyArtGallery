@@ -91,7 +91,7 @@ const PicCarouselGalleryDesign: React.FC<PicCarouselProps> = ({
         <img
           ref={lampImgRef} // Add ref to the second image
           src="http://www.uploads.co.il/uploads/images/622590044.png"
-          className="galleryLamp width-55 pt-4"
+          className="galleryLampFullSize galleryLampFullSize width-80 pt-4"
         />
         <div className="carousel carouselHeight">
           <img
