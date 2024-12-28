@@ -98,7 +98,7 @@ export const MobileView: React.FC<MobileViewProps> = ({ links,sofas,paintings,ar
       ? { backgroundImage: `url(${selectedTexture})`, backgroundSize: "cover", backgroundPosition: "center",paddingBottom: '20px' }
       : { backgroundColor: selectedColor, paddingBottom: '20px' }
   }> 
-    {paintings.length>0 && <PaintingWithLampFullSizeCarousel rightArrowClassName={'side-right-arrow'}leftArrowClassName={'side-left-arrow'} data={paintings} className={"framedPaintingFullSize"} />}
+    {paintings.length>0 && <PaintingWithLampFullSizeCarousel rightArrowClassName={'side-right-arrow-full-screen'}leftArrowClassName={'side-left-arrow-full-screen'} data={paintings} className={"framedPaintingFullSize"} />}
 
     <div className="pb-3 ">
     <ColorPicker setSelectedColor={setSelectedColor} setSelectedTexture={setSelectedTexture} colors={wallColorsOptions}/>
