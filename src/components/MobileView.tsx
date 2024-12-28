@@ -3,6 +3,9 @@ import PicCarouselGalleryDesign from "./PicCarouselGalleryDesign";
 import PicCarousel from "./PicCarousel";
 import ColorPicker from "./ColorPicker";
 import TexturePicker from "./TexturePicker";
+import PaintingWithLampFullSizeCarousel from "./PaintingWithLampFullSizeCarousel";
+import Header from "./Header";
+import headerVideo from "../assets/gifs/headervideo2.gif";
 
 interface MobileViewProps {
   sofas?: any;
@@ -66,13 +69,16 @@ export const MobileView: React.FC<MobileViewProps> = ({ links,sofas,paintings,ar
   return (
     
 < div className="text-center pt-4 " >
-  <img src={artistPic} className="circleAvatar width-40"/> 
-  <h2 className="fs-3 pt-2 pb-2 mt-4 mb-5 bg-body rubikRegular text-secondary">Tomer_Cohen_Art</h2>
-    <div className="pb-3">
-    <ColorPicker setSelectedColor={setSelectedColor} setSelectedTexture={setSelectedTexture} colors={wallColorsOptions}/>
-    <TexturePicker setSelectedTexture={setSelectedTexture} textures={wallTextureOptions}/>
-    </div>
-  <div style={
+
+    <h2 className="fs-3 pt-2 pb-2 mt-4 mb-5 bg-body rubikRegular text-secondary">@Tomer_Cohen_Art</h2>
+    <Header headerVideo={headerVideo}/>
+    <img src={artistPic} className="circleAvatar width-40 mb-3"/> 
+    
+
+
+{/* OPTION1- FULL LIVINGROOM */}
+
+  {/* <div style={
     selectedTexture
       ? { backgroundImage: `url(${selectedTexture})`, backgroundSize: "cover", backgroundPosition: "center",paddingBottom: '60px' }
       : { backgroundColor: selectedColor, paddingBottom: '100px' }
@@ -84,7 +90,25 @@ export const MobileView: React.FC<MobileViewProps> = ({ links,sofas,paintings,ar
   {
   paintings.length>0 && <PicCarousel setAnimateType={setAnimateType} animateType={animateType} rightArrowClassName={'below-right-arrow'}leftArrowClassName={'below-left-arrow'} data={sofas} className={"carousel-image"}/>}
 
+</div>  */}
+
+{/* OPTION2- ONLY LAMP&PAINTING */}
+<div style={
+    selectedTexture
+      ? { backgroundImage: `url(${selectedTexture})`, backgroundSize: "cover", backgroundPosition: "center",paddingBottom: '60px' }
+      : { backgroundColor: selectedColor, paddingBottom: '100px' }
+  }> 
+    {paintings.length>0 && <PaintingWithLampFullSizeCarousel rightArrowClassName={'side-right-arrow'}leftArrowClassName={'side-left-arrow'} data={paintings} className={"framedPaintingFullSize"} />}
+
+    <div className="pb-3 ">
+    <ColorPicker setSelectedColor={setSelectedColor} setSelectedTexture={setSelectedTexture} colors={wallColorsOptions}/>
+    <TexturePicker setSelectedTexture={setSelectedTexture} textures={wallTextureOptions}/>
+    </div>
+
 </div> 
+
+
+
 
   <div className=" linkContainer">
     {links.length>0 && links.map((link:LinkProp)=>{

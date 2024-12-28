@@ -11,7 +11,6 @@ export const Header: React.FC<HeaderProps> = ({ headerVideo }) => {
       {/**TODO - COMPONENT */}
       <img className="gif_header w-100" alt="gif" src={headerVideo || GifHeader} />
       <div className="content">
-        <h1 className="header_title fs-1">Tomer Cohen Art</h1>
         {/* <h6>Welcome to my world</h6> */}
       </div>
     </div>
