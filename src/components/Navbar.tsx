@@ -8,7 +8,7 @@ import Logo_2 from "../assets/images/logo_sofi.png";
 export const NavbarComp: React.FC = () => {
   return (
     <Navbar className="d-flex justify-content-center justify-content-md-start" dir="rtl" bg="dark" data-bs-theme="dark">
-      <div style={{ display: "ruby" }}>
+      <div className="ps-2" style={{ display: "ruby" }}>
         <Navbar.Brand href="#home">
           <img className="logo" src={Logo_2} alt="Logo" />
         </Navbar.Brand>
