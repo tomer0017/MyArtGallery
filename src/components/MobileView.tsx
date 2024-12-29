@@ -6,6 +6,9 @@ import TexturePicker from "./TexturePicker";
 import PaintingWithLampFullSizeCarousel from "./PaintingWithLampFullSizeCarousel";
 import Header from "./Header";
 import headerVideo from "../assets/gifs/headervideo2.gif";
+import AboutMe from "./AboutMe";
+import { Navbar } from "react-bootstrap";
+import NavbarComp from "./Navbar";
 
 interface MobileViewProps {
   sofas?: any;
@@ -70,9 +73,11 @@ export const MobileView: React.FC<MobileViewProps> = ({ links,sofas,paintings,ar
     
 < div className="text-center pt-4 " >
 
+    <NavbarComp/>
     <h2 className="fs-3 pt-2 pb-2 mt-4 mb-5 bg-body rubikRegular text-secondary">@Tomer_Cohen_Art</h2>
     <Header headerVideo={headerVideo}/>
-    <img src={artistPic} className="circleAvatar width-40 mb-3"/> 
+    <img src={artistPic} className="circleAvatar width-40"/> 
+    <AboutMe/>
     
 
 
