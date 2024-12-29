@@ -71,12 +71,12 @@ export const MobileView: React.FC<MobileViewProps> = ({ links,sofas,paintings,ar
 
   return (
     
-< div className="text-center pt-4 " >
+< div className="text-center" >
 
     <NavbarComp/>
-    <h2 className="fs-3 pt-2 pb-2 mt-4 mb-5 bg-body rubikRegular text-secondary">@Tomer_Cohen_Art</h2>
     <Header headerVideo={headerVideo}/>
     <img src={artistPic} className="circleAvatar width-40"/> 
+    <h2 className="fs-3 pt-2 pb-2 mb-5 bg-body rubikRegular text-secondary artistName">@Tomer_Cohen_Art</h2>
     <AboutMe/>
     
 

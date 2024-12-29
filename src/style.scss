@@ -394,8 +394,8 @@
       }
 
     .logo {
-      height: 42px;
-      width: 84px;
+      height: 120px;
+      width: 140px;
       }
   
     // .about_me{
@@ -594,6 +594,11 @@
   //mobile size
     @media screen and (max-width: 576px) {
         
+        .artistName{
+            top: -45px !important;
+            position: relative;
+        }
+
         .circleAvatar{
             top: -109px;
             position: relative; 
