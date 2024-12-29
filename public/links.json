@@ -3,35 +3,35 @@
     "id": 1,
     "icon": "fas fa-paint-brush",
     "name": "Order Painting",
-    "link": "https://www.tomercohenart.com",
-    "color": "#5637ad" 
+    "link": "https://www.etsy.com/shop/TomercohenArt?ref=seller-platform-mcnav",
+    "color": "#e07540" 
   },
   {
     "id": 2,
     "icon": "fab fa-tiktok",
     "name": "Tiktok",
     "link": "https://www.tiktok.com/@tomer_cohen_art",
-    "color": "#c03495"  
+    "color": "#261d24"  
   },
   {
     "id": 3,
     "icon": "fab fa-instagram",
     "name": "Instagram",
     "link": "https://www.instagram.com/tomer_cohen_art",
-    "color": "#db9b14"
+    "color": "#93795a"
   },
   {
     "id": 4,
     "icon": "fab fa-facebook-f",
     "name": "Facebook",
     "link": "https://www.facebook.com/tomer_cohen_art",
-    "color": "#128ea6" 
+    "color": "#126aa6" 
   },
   {
     "id": 5,
     "icon": "fab fa-youtube",
     "name": "Youtube",
     "link": "https://www.youtube.com/@tomer_cohen_art",
-    "color": "#f15858"  
+    "color": "#b02327"  
   }
 ]

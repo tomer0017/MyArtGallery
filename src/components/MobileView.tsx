@@ -76,7 +76,7 @@ export const MobileView: React.FC<MobileViewProps> = ({ links,sofas,paintings,ar
     <NavbarComp/>
     <Header headerVideo={headerVideo}/>
     <img src={artistPic} className="circleAvatar width-40"/> 
-    <h2 className="fs-3 pt-2 pb-2 mb-5 bg-body rubikRegular text-secondary artistName">@Tomer_Cohen_Art</h2>
+    <h2 className="fs-3 pt-2 pb-2 mb-4 bg-body rubikRegular text-secondary artistName">@Tomer_Cohen_Art</h2>
     <AboutMe/>
     
 
