@@ -135,7 +135,7 @@
     ]
 
   },
-
+  
   {
     "id": 8,
     "src":"http://www.uploads.co.il/uploads/images/546875241.jpeg",
@@ -146,6 +146,22 @@
     "price": [
       {
         "size":"20*40",
+        "price":1000
+      }
+    ]
+
+  },
+
+  {
+    "id": 9,
+    "src":"http://www.uploads.co.il/uploads/images/370981119.jpg",
+    "sofa_url":"http://www.uploads.co.il/uploads/images/463954378.png",
+    "name": "פרידה",
+    "width": 50,
+    "height":50,
+    "price": [
+      {
+        "size":"50*50",
         "price":1000
       }
     ]
