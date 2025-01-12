@@ -29,7 +29,7 @@ export const TexturePicker: React.FC<TexturePickerProps> = ({textures,setSelecte
             borderRadius: "50%",
             marginLeft: "10px",
             marginRight: "10px",
-            boxShadow: texture.url === "#FFFFFF" ? "0 0 10px rgba(0,0,0,0.1)" : "0 4px 6px rgba(0,0,0,0.2)",
+            boxShadow: texture.url === "#FFFFFF" ? "0 0 10px rgba(0,0,0.4,0.4)" : "0 4px 6px rgba(0,0,0.4,0.4)",
             // border: selectedColor === color.url ? "3px solid #FFD700" : "none", // Highlight selected color
             cursor: "pointer", // Show it's clickable
           }}
