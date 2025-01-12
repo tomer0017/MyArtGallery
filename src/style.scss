@@ -1,8 +1,8 @@
 //fonts//
-.rubikLight {
-    font-family: 'Rubik', sans-serif;
-    font-weight: 300;
-  }
+  .rubikLight {
+      font-family: 'Rubik', sans-serif;
+      font-weight: 300;
+    }
   
   .rubikRegular {
     font-family: 'Rubik', sans-serif;
@@ -24,6 +24,14 @@
     font-weight: 900;
   }
   
+  .text{
+    &-l-grey{
+        color: #c6c6c6;
+    }
+    &-d-grey{
+      color: #404040;
+    }
+  }
   .width{
     &-20{
         width: 20%;
@@ -343,7 +351,7 @@
         margin-bottom: 13vh;
       }
 
-     
+//framedPainting--------------------------------------------------------------------------------------     
 
       .framedPainting {
         display: inline-block;
@@ -363,23 +371,48 @@
         background: #fff;
       }
 
-      .framedPaintingFullSize{
-            display: inline-block;
-            // position: relative;
-            max-height: 250px;
-            // max-width: 50%;
-            object-fit: contain;
-            // transform: rotate(-2deg); /* Adds a slight tilt */
+
+      .black-outer-border{
             box-shadow: 
             rgba(0, 0, 0, 0.4) 0px 2px 1px,
             rgba(0, 0, 0, 0.03) 0px 4px 2px, 
             rgba(0, 0, 0, 0.03) 0px 8px 4px, 
             rgba(0, 0, 0, 0.02) 0px 16px 8px, 
             rgba(0, 0, 0.0, 0.49) 5px 12px 19px;
-            border: 2px solid #1f1f1f; /* Simulates a photo border */
-            margin-top: 60px;
+            border: 5px solid #161616; /* Simulates a photo border */
+            // margin-top: 60px;
             background: #fff;
       }
+
+      .white-outer-border{
+        box-shadow: 
+            rgba(0, 0, 0, 0.4) 0px 2px 1px,
+            rgba(0, 0, 0, 0.03) 0px 4px 2px, 
+            rgba(0, 0, 0, 0.03) 0px 8px 4px, 
+            rgba(0, 0, 0, 0.02) 0px 16px 8px, 
+            rgba(0, 0, 0.0, 0.49) 5px 12px 19px;
+            border: 6px solid #f1f1f1; /* Simulates a photo border */
+            // margin-top: 60px;
+            background: #fff;
+      } 
+
+      .middle-border{
+        border: 2px solid #393939; 
+        box-shadow: rgba(0.3, 0.3, 0.3, 0.3) 0px 1.5px 1px;
+      }
+
+    .inner-border{
+      display: inline-block;
+      // position: relative;
+      max-height: 250px;
+      // max-width: 50%;
+      object-fit: contain;
+      box-shadow: rgba(0.3, 0.3, 0.3, 0.3) 0px 2px 1px;
+      border: 2px solid #080808;
+    }
+  
+//-------------------------------------------------------------------------------------------------     
+
 
        .mockupWallTest{  /*wall mockup picture */
         width: 100%; /* Set the desired width */
@@ -433,6 +466,7 @@
     .navbar_style{
       display: none;
     }
+    
   
     .swipe_gif{
       width: 150px;
@@ -594,6 +628,17 @@
   //mobile size
     @media screen and (max-width: 576px) {
         
+        .chips{
+          &-250{
+            width:250px;
+            height:60px;
+            margin-bottom: 50px;
+            background-color: #202020;
+            border-radius: 30px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+          }           
+        }
+
         .artistName{
             top: -45px !important;
             position: relative;

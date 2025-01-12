@@ -30,6 +30,7 @@ const PicCarouselGalleryDesign: React.FC<PicCarouselProps> = ({
 }) => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [responsivePicWidth, setResponsivePicWidth] = useState("");
+  const [isBlack, setIsBlack] = useState(true);
   const imgRef = useRef<HTMLImageElement | null>(null);
   const lampImgRef = useRef<HTMLImageElement | null>(null); // Ref for the second image
 
@@ -38,6 +39,10 @@ const PicCarouselGalleryDesign: React.FC<PicCarouselProps> = ({
     setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? data.length - 1 : prevIndex - 1
     );
+  };
+
+  const toggleClass = () => {
+    setIsBlack((prev) => !prev);
   };
 
   // Go to the next picture
@@ -93,22 +98,27 @@ const PicCarouselGalleryDesign: React.FC<PicCarouselProps> = ({
           src="http://www.uploads.co.il/uploads/images/622590044.png"
           className="galleryLampFullSize galleryLampFullSize width-80 pt-4"
         />
-        <div className="carousel carouselHeight">
-          <img
-            ref={imgRef}
-            className={className}
-            style={{
-              maxWidth: responsivePicWidth === "0px" ? "120px" : responsivePicWidth,
-            }}
-            src={currentItem.src}
-            alt={currentItem.title}
-            onClick={() => {
-              const newWidth =
-                currentItem.width >= currentItem.height
-                  ? "150px"
-                  : `${(140 * currentItem.width) / currentItem.height}px`;
-            }}
-          />
+        <div className="carousel carouselHeight" ref={imgRef}>
+          <div className={isBlack ? 'black-outer-border' : 'white-outer-border'}
+            onClick={toggleClass}>
+            <div className="middle-border">
+              <img
+                
+                className='inner-border'
+                style={{
+                  maxWidth: responsivePicWidth === "0px" ? "120px" : responsivePicWidth,
+                }}
+                src={currentItem.src}
+                alt={currentItem.title}
+                onClick={() => {
+                  const newWidth =
+                    currentItem.width >= currentItem.height
+                      ? "150px"
+                      : `${(140 * currentItem.width) / currentItem.height}px`;
+                }}
+              />
+            </div>
+          </div>
         </div>
         <button className={`arrow ${rightArrowClassName}`} onClick={nextPic}>
           &gt;

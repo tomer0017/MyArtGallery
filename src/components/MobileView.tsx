@@ -9,6 +9,7 @@ import headerVideo from "../assets/gifs/headervideo2.gif";
 import AboutMe from "./AboutMe";
 import { Navbar } from "react-bootstrap";
 import NavbarComp from "./Navbar";
+import Chips from "./Chips";
 
 interface MobileViewProps {
   sofas?: any;
@@ -76,7 +77,11 @@ export const MobileView: React.FC<MobileViewProps> = ({ links,sofas,paintings,ar
     <NavbarComp/>
     <Header headerVideo={headerVideo}/>
     <img src={artistPic} className="circleAvatar width-40"/> 
-    <h2 className="fs-3 pt-2 pb-2 mb-4 bg-body rubikRegular text-secondary artistName">@Tomer_Cohen_Art</h2>
+    <div className="d-flex justify-content-center align-items-center">
+      <Chips text='@_Tomer_Cohen_Art' bgColor='' color='text-l-grey'/> 
+    </div>
+    
+    {/* <h2 className="fs-3 pt-2 pb-2 mb-4 bg-body rubikRegular text-secondary artistName">@Tomer_Cohen_Art</h2> */}
     <AboutMe/>
     
 
