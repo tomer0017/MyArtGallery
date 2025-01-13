@@ -73,7 +73,8 @@ function App() {
 
   return (
     <div>
-      {/* <NavbarComp/>
+      <div className='web-view'>
+      <NavbarComp/>
       <div className='mockupWall'>
         <Row>
             <Col xs={3} md={3}>
@@ -82,9 +83,9 @@ function App() {
         </Row>
 
             
-        {paintings.length>0 && <PicCarousel data={paintings} className={"photo-on-wall"}   setPicName={setPicName}  setPicDescription={setPicDescription}/>}
+        {paintings.length>0 && <PicCarousel data={paintings} className={"photo-on-wall"} setPicName={setPicName} setPicDescription={setPicDescription} rightArrowClassName={''} leftArrowClassName={''} animateType={''}/>}
 
-        {sofas.length>0 &&<PicCarousel  data={sofas} className={"carousel-image"}   setPicName={setPicName}  setPicDescription={setPicDescription}/>}
+        {sofas.length>0 &&<PicCarousel  data={sofas} className={"carousel-image"} setPicName={setPicName} setPicDescription={setPicDescription} rightArrowClassName={''} leftArrowClassName={''} animateType={''}/>}
 
          </div>
       <Container dir='rtl'>
@@ -104,8 +105,8 @@ function App() {
 
       <img src="https://i.etsystatic.com/isbl/6a72cb/68392929/isbl_3360x840.68392929_akpnko9r.jpg?version=0" style={{    padding:"1px",
       borderRadius: "30px 30px 0px 0px",border:"1rem solid"}} width={"100%"}/>
-      <Footer/> */}
-
+      <Footer/>
+</div>
       {paintings.length>0 && <MobileView links={links} artistPic={artist_pic} sofas={sofas} paintings={paintings}/> }
     </div>
   )

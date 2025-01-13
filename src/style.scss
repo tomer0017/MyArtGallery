@@ -627,7 +627,9 @@
    
   //mobile size
     @media screen and (max-width: 576px) {
-        
+      .web-view {
+        display: none;
+      }
         .chips{
           &-250{
             width:250px;
@@ -657,7 +659,9 @@
 
 
    @media screen and (min-width: 576px) {
-
+    .mobile-view {
+      display: none;
+    }
     .carouselHeight{
         height: 30vh;
    }

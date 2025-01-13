@@ -72,7 +72,7 @@ export const MobileView: React.FC<MobileViewProps> = ({ links,sofas,paintings,ar
 
   return (
     
-< div className="text-center" >
+< div className="mobile-view text-center" >
 
     <NavbarComp/>
     <Header headerVideo={headerVideo}/>
