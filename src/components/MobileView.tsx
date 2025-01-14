@@ -133,7 +133,7 @@ export const MobileView: React.FC<MobileViewProps> = ({ links,sofas,paintings,ar
             >
                 <div className="d-flex align-items-center justify-content-start">
                     {link.icon && <i className={`${link.icon} me-2 text-dark`}></i>}
-                    <span className="text-dark text-center" style={{ flex: 1 }}>{link.name}</span>
+                    <span className="text-dark text-center " style={{ flex: 1 }}>{link.name}</span>
                 </div>
             </button>
         </div>
