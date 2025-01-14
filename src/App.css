@@ -14,7 +14,7 @@ body {
   background-repeat: no-repeat; /* Prevents the image from repeating */
 
   /* Overlay with Opacity */
-  /* position: relative; */
+  position: relative;
   
 }
 
