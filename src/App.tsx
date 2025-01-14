@@ -73,7 +73,7 @@ function App() {
 
   return (
     <div>
-      <div className="web-view">
+      {/* <div className="web-view">
         <NavbarComp />
         <div className="mockupWall">
           <Row>
@@ -141,7 +141,7 @@ function App() {
           width={"100%"}
         />
         <Footer />
-      </div>
+      </div> */}
 
       {/* ----------------------- mobile mobile ----------------------- */}
 
