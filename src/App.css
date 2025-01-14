@@ -4,14 +4,22 @@
 
   /* Background Image */
   background-image: url('http://www.uploads.co.il/uploads/images/75474388.jpg');
-  background-size: cover; /* Make sure the image covers the whole screen */
-  background-attachment: fixed; /* Allows the background to move with scrolling */
+  background-size: cover; /* Ensures the image covers the screen */
   background-position: center; /* Center the background image */
-  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-repeat: no-repeat; /* Prevent repetition */
+  height: 100vh; /* Makes it cover the full viewport height */
 
-  /* Overlay with Opacity */
+  /* For Smooth Scrolling Effect */
   position: relative;
 }
+
+@media screen and (max-width: 768px) {
+  #root {
+    background-attachment: scroll; /* Fallback for mobile devices */
+  }
+}
+
+
 
 
 
