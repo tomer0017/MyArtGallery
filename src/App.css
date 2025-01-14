@@ -2,12 +2,11 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   overflow-x: hidden; /* Prevent horizontal scrolling */
+
+  z-index: 0;
 }
 
-#root {
-  position: relative;
-  z-index: 1;
-}
+
 
 .background1 {
   position: fixed;
@@ -19,6 +18,7 @@ body {
   background-size: cover; /* Ensures the image covers the screen */
   background-position: center; /* Center the background image */
   background-repeat: no-repeat; /* Prevent repetition */
+  
 }
 
 

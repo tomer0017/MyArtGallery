@@ -7,7 +7,7 @@ interface HeaderProps {
 
 export const Header: React.FC<HeaderProps> = ({ headerVideo }) => {
   return (
-    <div className="">
+    <div className="position-relative">
       {/**TODO - COMPONENT */}
       <img className="gif_header w-100" alt="gif" src={headerVideo || GifHeader} />
       <div className="content">

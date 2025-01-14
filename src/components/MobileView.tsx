@@ -77,7 +77,7 @@ export const MobileView: React.FC<MobileViewProps> = ({ links,sofas,paintings,ar
     <NavbarComp/>
     <Header headerVideo={headerVideo}/>
     <img src={artistPic} className="circleAvatar width-40"/> 
-    <div className="d-flex justify-content-center align-items-center">
+    <div className="position-relative d-flex justify-content-center align-items-center">
       <Chips text='@_Tomer_Cohen_Art' bgColor='' color='text-l-grey'/> 
     </div>
     
@@ -103,7 +103,7 @@ export const MobileView: React.FC<MobileViewProps> = ({ links,sofas,paintings,ar
 </div>  */}
 
 {/* OPTION2- ONLY LAMP&PAINTING */}
-<div style={
+<div className="position-relative" style={
     selectedTexture
       ? { backgroundImage: `url(${selectedTexture})`, backgroundSize: "cover", backgroundPosition: "center",paddingBottom: '20px' }
       : { backgroundColor: selectedColor, paddingBottom: '20px' }
@@ -124,9 +124,9 @@ export const MobileView: React.FC<MobileViewProps> = ({ links,sofas,paintings,ar
     {links.length>0 && links.map((link:LinkProp)=>{
         
         return (
-        <div className="py-2 ">
+        <div className="py-2 position-relative">
             <button
-            className="linkButton"
+            className="linkButton "
             key={link.id}
             style={{ backgroundColor: link.color }}
             onClick={() => window.open(link.link, "_blank")}
