@@ -7,16 +7,10 @@
   background-size: cover; /* Ensures the image covers the screen */
   background-position: center; /* Center the background image */
   background-repeat: no-repeat; /* Prevent repetition */
-  height: 100vh; /* Makes it cover the full viewport height */
+  height: auto; /* Allow the content to define the height */
 
-  /* For Smooth Scrolling Effect */
-  position: relative;
-}
-
-@media screen and (max-width: 768px) {
-  #root {
-    background-attachment: scroll; /* Fallback for mobile devices */
-  }
+  /* Scrolling Effect */
+  background-attachment: fixed; /* Makes the background scroll with content */
 }
 
 

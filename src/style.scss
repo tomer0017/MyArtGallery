@@ -372,29 +372,32 @@
       }
 
 
-      .black-outer-border{
-            box-shadow: 
+      .black-outer-border {
+        box-shadow: 
             rgba(0, 0, 0, 0.4) 0px 2px 1px,
             rgba(0, 0, 0, 0.03) 0px 4px 2px, 
             rgba(0, 0, 0, 0.03) 0px 8px 4px, 
-            rgba(0, 0, 0, 0.02) 0px 16px 8px, 
-            rgba(0, 0, 0.0, 0.49) 5px 12px 19px;
-            border: 5px solid #161616; /* Simulates a photo border */
-            // margin-top: 60px;
-            background: #fff;
-      }
+            rgba(241, 241, 241, 0.02) 0px 16px 8px, 
+            rgb(133, 133, 133) 7px 7px 5px;
+        border: 5px solid transparent; /* Set to transparent initially */
+        border-image: linear-gradient(20deg, #090909, #2a2a2a); /* Your gradient colors */
+        border-image-slice: 1;
+        background: #fff;
+    }
 
       .white-outer-border{
         box-shadow: 
             rgba(0, 0, 0, 0.4) 0px 2px 1px,
             rgba(0, 0, 0, 0.03) 0px 4px 2px, 
             rgba(0, 0, 0, 0.03) 0px 8px 4px, 
-            rgba(0, 0, 0, 0.02) 0px 16px 8px, 
-            rgba(0, 0, 0.0, 0.49) 5px 12px 19px;
-            border: 6px solid #f1f1f1; /* Simulates a photo border */
-            // margin-top: 60px;
+            rgba(241, 241, 241, 0.02) 0px 16px 8px, 
+            rgb(133, 133, 133) 7px 7px 5px;
+            border: 5px solid transparent; /* Simulates a photo border */
+            border-image: linear-gradient(20deg, #c5c5c5, #e5e5e5); /* Your gradient colors */
+            border-image-slice: 1;
             background: #fff;
-      } 
+    }
+       
 
       .middle-border{
         border: 2px solid #494949; 
