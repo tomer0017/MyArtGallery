@@ -8,7 +8,7 @@ body {
 
   /* Background Image */
   background-image: url('http://www.uploads.co.il/uploads/images/75474388.jpg');
-  background-size: cover; /* Make sure the image covers the whole screen */
+  background-size: contain; /* Make sure the image covers the whole screen */
   background-attachment: fixed; /* Allows the background to move with scrolling */
   background-position: center; /* Center the background image */
   background-repeat: no-repeat; /* Prevents the image from repeating */
