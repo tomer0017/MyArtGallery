@@ -1,9 +1,37 @@
-#root {
-  /* max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center; */
+/* #root {
   background-color: #d6d6d6;
+} */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+
+  /* Background Image */
+  background-image: url('http://www.uploads.co.il/uploads/images/75474388.jpg');
+  background-size: cover; /* Make sure the image covers the whole screen */
+  background-attachment: fixed; /* Allows the background to move with scrolling */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+
+  /* Overlay with Opacity */
+  position: relative;
+  
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('http://www.uploads.co.il/uploads/images/75474388.jpg'); /* Replace with your image path */
+  background-size: cover; /* Cover the entire area */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent repetition */
+  background-attachment: fixed; /* Moves the image while scrolling */
+  opacity: 0.5; /* Set desired opacity (0 is fully transparent, 1 is fully opaque) */
+  z-index: -1; /* Push the background behind content */
 }
 
 .logo {

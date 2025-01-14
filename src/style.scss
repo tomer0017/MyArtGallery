@@ -1280,6 +1280,18 @@
   }
 
 
+  .photo-on-wall {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    // width: 40px;
+    // height: 10px;
+    background: rgba(0, 0, 0, 0.3); /* Simulates a nail or hook shadow */
+    border-radius: 5px;
+  }
+
   .photo-on-wall::after {
     content: '';
     position: absolute;

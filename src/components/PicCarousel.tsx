@@ -15,7 +15,7 @@ interface PicCarouselProps {
   className: string;
   rightArrowClassName: string;
   leftArrowClassName: string;
-  animateType: string;
+  animateType?: string;
   setPicWidth?: (width: string) => void;
   setAnimateType?: (type: "in" | "out") => void;
   setMockupPic?: (src: string) => void;

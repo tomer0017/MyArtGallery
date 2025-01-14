@@ -73,43 +73,88 @@ function App() {
 
   return (
     <div>
-      <div className='web-view'>
-      <NavbarComp/>
-      <div className='mockupWall'>
-        <Row>
+      <div className="web-view">
+        <NavbarComp />
+        <div className="mockupWall">
+          <Row>
             <Col xs={3} md={3}>
-              <MockupDescription   picName={picName} picDescription={picDescription}  />
+              <MockupDescription
+                picName={picName}
+                picDescription={picDescription}
+              />
             </Col>
-        </Row>
+          </Row>
 
-            
-        {paintings.length>0 && <PicCarousel data={paintings} className={"photo-on-wall"} setPicName={setPicName} setPicDescription={setPicDescription} rightArrowClassName={''} leftArrowClassName={''} animateType={''}/>}
+          {paintings.length > 0 && (
+            <PicCarousel
+              data={paintings}
+              className={"photo-on-wall"}
+              setPicName={setPicName}
+              setPicDescription={setPicDescription}
+              rightArrowClassName={""}
+              leftArrowClassName={""}
+              animateType={""}
+            />
+          )}
 
-        {sofas.length>0 &&<PicCarousel  data={sofas} className={"carousel-image"} setPicName={setPicName} setPicDescription={setPicDescription} rightArrowClassName={''} leftArrowClassName={''} animateType={''}/>}
-
-         </div>
-      <Container dir='rtl'>
-        <Row className='about_me my-5'>
-      <Col className='about_me_text' md={6} xs={12} >
-        <AboutMe/>
-      </Col>
-      <Col md={6} xs={12}>
-      <img className='about_me_pic' alt="pic for about me" src={artist_pic} />
-      </Col>
-    </Row>
-      </Container>
-       <Header headerVideo={headerVideo}/>
+          {sofas.length > 0 && (
+            <PicCarousel
+              data={sofas}
+              className={"carousel-image"}
+              setPicName={setPicName}
+              setPicDescription={setPicDescription}
+              rightArrowClassName={""}
+              leftArrowClassName={""}
+              animateType={""}
+            />
+          )}
+        </div>
 
 
-       {paintings.length>0 && <Gallery   data={paintings}  /> }
 
-      <img src="https://i.etsystatic.com/isbl/6a72cb/68392929/isbl_3360x840.68392929_akpnko9r.jpg?version=0" style={{    padding:"1px",
-      borderRadius: "30px 30px 0px 0px",border:"1rem solid"}} width={"100%"}/>
-      <Footer/>
-</div>
-      {paintings.length>0 && <MobileView links={links} artistPic={artist_pic} sofas={sofas} paintings={paintings}/> }
+
+        <Container dir="rtl">
+          <Row className="about_me my-5">
+            <Col className="about_me_text" md={6} xs={12}>
+              <AboutMe />
+            </Col>
+            <Col md={6} xs={12}>
+              <img
+                className="about_me_pic"
+                alt="pic for about me"
+                src={artist_pic}
+              />
+            </Col>
+          </Row>
+        </Container>
+        <Header headerVideo={headerVideo} />
+
+        {paintings.length > 0 && <Gallery data={paintings} />}
+
+        <img
+          src="https://i.etsystatic.com/isbl/6a72cb/68392929/isbl_3360x840.68392929_akpnko9r.jpg?version=0"
+          style={{
+            padding: "1px",
+            borderRadius: "30px 30px 0px 0px",
+            border: "1rem solid",
+          }}
+          width={"100%"}
+        />
+        <Footer />
+      </div>
+
+      {/* ----------------------- mobile mobile ----------------------- */}
+
+      {paintings.length > 0 && (
+        <MobileView
+          links={links}
+          artistPic={artist_pic}
+          sofas={sofas}
+          paintings={paintings}
+        />
+      )}
     </div>
-  )
+  );
 }
 
 export default App
