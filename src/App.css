@@ -19,7 +19,6 @@ body {
   background-size: cover; /* Ensures the image covers the screen */
   background-position: center; /* Center the background image */
   background-repeat: no-repeat; /* Prevent repetition */
-  z-index: -1; /* Keeps the background behind content */
 }
 
 
