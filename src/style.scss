@@ -32,6 +32,12 @@
       color: #404040;
     }
   }
+
+  .font-size{
+    &-1-1rem{
+      font-size: 1.1rem;
+    }
+  }
   .width{
     &-20{
         width: 20%;
@@ -378,7 +384,7 @@
             rgba(0, 0, 0, 0.03) 0px 4px 2px, 
             rgba(0, 0, 0, 0.03) 0px 8px 4px, 
             rgba(241, 241, 241, 0.02) 0px 16px 8px, 
-            rgb(133, 133, 133) 7px 7px 5px;
+            rgba(11, 11, 11, 0.3) 7px 7px 5px;
         border: 5px solid transparent; /* Set to transparent initially */
         border-image: linear-gradient(20deg, #090909, #2a2a2a); /* Your gradient colors */
         border-image-slice: 1;
@@ -391,7 +397,7 @@
             rgba(0, 0, 0, 0.03) 0px 4px 2px, 
             rgba(0, 0, 0, 0.03) 0px 8px 4px, 
             rgba(241, 241, 241, 0.02) 0px 16px 8px, 
-            rgb(133, 133, 133) 7px 7px 5px;
+            rgba(11, 11, 11, 0.3) 7px 7px 5px;
             border: 5px solid transparent; /* Simulates a photo border */
             border-image: linear-gradient(20deg, #c5c5c5, #e5e5e5); /* Your gradient colors */
             border-image-slice: 1;

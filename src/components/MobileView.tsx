@@ -30,10 +30,10 @@ export const MobileView: React.FC<MobileViewProps> = ({ links,sofas,paintings,ar
     const [wallColorsOptions,setWallColorOptions] = useState([]);
     const [selectedColor, setSelectedColor] = useState<string>("#d6d6d6");
     const [wallTextureOptions,setWallTextureOptions] = useState([]);
-    const [selectedTexture, setSelectedTexture] = useState<string>("");
+    const [selectedTexture, setSelectedTexture] = useState<string>("https://static.vecteezy.com/system/resources/previews/007/625/838/non_2x/old-grunge-white-cement-wall-texture-for-background-photo.jpg");
     const [animateType, setAnimateType] = useState("in");
 
-    const [wallColor,setWallColor] = useState('#d6d6d6');
+    const [wallColor,setWallColor] = useState('');
   
   
   useEffect(() => {
@@ -132,8 +132,8 @@ export const MobileView: React.FC<MobileViewProps> = ({ links,sofas,paintings,ar
             onClick={() => window.open(link.link, "_blank")}
             >
                 <div className="d-flex align-items-center justify-content-start">
-                    {link.icon && <i className={`${link.icon} me-2 text-dark`}></i>}
-                    <span className="text-dark text-center " style={{ flex: 1 }}>{link.name}</span>
+                    {link.icon && <i className={`${link.icon} me-2 text-dark font-size-1-1rem`}></i>}
+                    <span className="text-dark text-center font-size-1-1rem" style={{ flex: 1 }}>{link.name}</span>
                 </div>
             </button>
         </div>
