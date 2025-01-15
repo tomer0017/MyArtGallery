@@ -79,7 +79,7 @@ export const MobileView: React.FC<MobileViewProps> = ({ links,sofas,paintings,ar
     <Header headerVideo={headerVideo}/>
     <img src={artistPic} className="circleAvatar width-40"/> 
     <div className="position-relative d-flex justify-content-center align-items-center">
-      <Chips text='@_Tomer_Cohen_Art' bgColor='' color='text-l-grey'/> 
+      <Chips text='@Tomer_Cohen_Art' bgColor='' color='text-l-grey'/> 
     </div>
     
     {/* <h2 className="fs-3 pt-2 pb-2 mb-4 bg-body rubikRegular text-secondary artistName">@Tomer_Cohen_Art</h2> */}
