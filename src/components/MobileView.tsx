@@ -10,6 +10,7 @@ import AboutMe from "./AboutMe";
 import { Navbar } from "react-bootstrap";
 import NavbarComp from "./Navbar";
 import Chips from "./Chips";
+import Footer from "./Footer";
 
 interface MobileViewProps {
   sofas?: any;
@@ -140,7 +141,7 @@ export const MobileView: React.FC<MobileViewProps> = ({ links,sofas,paintings,ar
         );
     })}
   </div>
-
+<Footer/>
 
     </div>
 
