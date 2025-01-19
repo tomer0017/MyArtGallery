@@ -14,6 +14,10 @@ interface PicCarouselProps {
   className: string;
   rightArrowClassName: string;
   leftArrowClassName: string;
+  frameColor: boolean;
+  innerFrame: boolean;
+  isVisible: boolean;
+  onChangeFrameColor: () => void; 
   setPicWidth?: (width: string) => void;
   setAnimateType?: (type: "in" | "out") => void;
   setMockupPic?: (src: string) => void;
@@ -27,6 +31,10 @@ const PicCarouselGalleryDesign: React.FC<PicCarouselProps> = ({
   className,
   rightArrowClassName,
   leftArrowClassName,
+  frameColor,
+  innerFrame,
+  isVisible,
+  onChangeFrameColor,
 }) => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [responsivePicWidth, setResponsivePicWidth] = useState("");
@@ -90,18 +98,20 @@ const PicCarouselGalleryDesign: React.FC<PicCarouselProps> = ({
   return (
     <>
       <div className="carousel-container">
-        <button className={`arrow ${leftArrowClassName}`} onClick={prevPic}>
-          &lt;
-        </button>
+        {
+          isVisible ? <button className={`arrow ${leftArrowClassName}`} onClick={prevPic}>
+            &lt;
+          </button> : ""
+        }  
         <img
           ref={lampImgRef} // Add ref to the second image
           src="http://www.uploads.co.il/uploads/images/622590044.png"
           className="galleryLampFullSize galleryLampFullSize width-80 pt-4"
         />
         <div className="carousel carouselHeight" ref={imgRef}>
-          <div className={isBlack ? 'black-outer-border' : 'white-outer-border'}
-            onClick={toggleClass}>
-            <div className="middle-border">
+          <div className={frameColor ? 'black-outer-border' : 'white-outer-border'}
+            onClick={onChangeFrameColor}>
+            <div className={innerFrame ? 'middle-border' : 'width-middle-border'}>
               <img
                 
                 className='inner-border'
@@ -120,9 +130,13 @@ const PicCarouselGalleryDesign: React.FC<PicCarouselProps> = ({
             </div>
           </div>
         </div>
+        {
+          isVisible ? 
         <button className={`arrow ${rightArrowClassName}`} onClick={nextPic}>
           &gt;
         </button>
+        : ""
+      } 
       </div>
     </>
   );
