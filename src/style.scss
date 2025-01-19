@@ -80,7 +80,13 @@
    }
 
 
-
+   .p-colorpicker-preview{
+    border-radius: 50%;
+    position: relative;
+    top:-8px;
+    width: 30px;
+    height: 30px;
+   }
 
    .mockupWall {  /*wall mockup picture */
     width: 100%; /* Set the desired width */

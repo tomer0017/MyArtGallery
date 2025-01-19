@@ -1,6 +1,8 @@
 import React from "react";
+import { ColorPicker } from 'primereact/colorpicker';
 
 interface ColorPickerProps {
+  selectedColor : string;
   colors?:any;
   setSelectedColor: (color: string) => void;
   setSelectedTexture?: (url: string) => void;
@@ -12,9 +14,18 @@ interface ColorProp {
     color: string;
   }
 
-export const ColorPicker: React.FC<ColorPickerProps> = ({colors,setSelectedColor,setSelectedTexture}) => {
+export const ColorPicker2: React.FC<ColorPickerProps> = ({colors,selectedColor,setSelectedColor,setSelectedTexture}) => {
   return (
     < div className="text-center">
+    <ColorPicker className="px-2" defaultColor='#fffff' format="hex" value={selectedColor}   onChange={(e) => {
+      setSelectedColor('#'+e.value?.toString())
+      if (setSelectedTexture) {
+        setSelectedTexture("");
+      }
+      
+    }}
+    />
+
     {colors.length>0 && colors.map((color:ColorProp, index: number)=>{
         
         return (
@@ -44,4 +55,4 @@ export const ColorPicker: React.FC<ColorPickerProps> = ({colors,setSelectedColor
   );
 };
 
-export default ColorPicker;
+export default ColorPicker2;

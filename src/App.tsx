@@ -14,6 +14,9 @@ import Gallery from './components/Gallery';
 import Footer from './components/Footer';
 import MobileView from './components/MobileView';
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import 'primereact/resources/themes/lara-light-indigo/theme.css';  // Choose a theme
+import 'primereact/resources/primereact.min.css';                 // Core CSS
+import 'primeicons/primeicons.css';                              // Icons
 
 
 

@@ -84,8 +84,8 @@ if (imgRef.current) {
   // Step 1: Initial scaling and rotation
   tl.fromTo(
     imgRef.current,
-    { scale: 1, rotate: -20, opacity: 0.6 },
-    { scale: 1, rotate: 15, opacity: 1, duration: 0.2, ease: "power2.out" }
+    { scale: 0.6, rotate: -20, opacity: 0.6 },
+    { scale: 0.9, rotate: 15, opacity: 1, duration: 0.2, ease: "power2.out" }
   )
     // Step 2: Rotate back to 0 and scale slightly
     .to(imgRef.current, {

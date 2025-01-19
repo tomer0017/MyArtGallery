@@ -11,6 +11,7 @@ import { Button, Navbar } from "react-bootstrap";
 import NavbarComp from "./Navbar";
 import Chips from "./Chips";
 import Footer from "./Footer";
+// import { ColorPicker } from 'primereact/colorpicker';
 
 interface MobileViewProps {
   sofas?: any;
@@ -132,12 +133,12 @@ export const MobileView: React.FC<MobileViewProps> = ({ links,sofas,paintings,ar
         {/* mockup settings  */}
         <div className="pb-2">
           
-          <Button onClick={handleChangeInnerFrame} className="m-1 bg-dark rounded-pill">
+          <button onClick={handleChangeInnerFrame} className="m-1 p-2 px-3 shadow  bg-dark text-light rounded-pill">
             מסגרת פנימית
-          </Button>
-          <Button onClick={handleChangeFrameColor} className="m-1 bg-dark rounded-pill">
+          </button>
+          <button onClick={handleChangeFrameColor} className="m-1 p-2 px-3 shadow bg-dark text-light rounded-pill">
             מסגרת חיצונית
-          </Button>
+          </button>
           {/* <Button className="m-1 bg-dark rounded-pill">כמות תמונות</Button> */}
         </div>
         {paintings.length > 0 && (
@@ -155,9 +156,10 @@ export const MobileView: React.FC<MobileViewProps> = ({ links,sofas,paintings,ar
 
         {isVisible ? <div className="pb-3 ">
           <div className="d-flex justify-content-center">
-            <div className="bg-dark w-25 text-center text-light py-1 fs-6 my-3 rounded-pill">שנה רקע</div>
+            <div className="bg-dark w-25 text-center text-light py-1 fs-6 my-3 rounded-pill">בחר רקע</div>
           </div>
           <ColorPicker
+            selectedColor = {selectedColor}
             setSelectedColor={setSelectedColor}
             setSelectedTexture={setSelectedTexture}
             colors={wallColorsOptions}
