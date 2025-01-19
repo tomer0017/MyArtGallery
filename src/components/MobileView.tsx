@@ -130,15 +130,15 @@ export const MobileView: React.FC<MobileViewProps> = ({ links,sofas,paintings,ar
         }
       >
         {/* mockup settings  */}
-        <div className="pb-4">
+        <div className="pb-2">
+          <Button onClick={toggleVisibility} className="m-1 bg-seccss rounded-pill">מצב צילום</Button>
           <Button onClick={handleChangeInnerFrame} className="m-1 bg-dark rounded-pill">
             מסגרת פנימית
           </Button>
           <Button onClick={handleChangeFrameColor} className="m-1 bg-dark rounded-pill">
             מסגרת חיצונית
           </Button>
-          <Button className="m-1 bg-dark rounded-pill">כמות תמונות</Button>
-          <Button onClick={toggleVisibility} className="m-1 bg-dark rounded-pill">מצב צילום</Button>
+          {/* <Button className="m-1 bg-dark rounded-pill">כמות תמונות</Button> */}
         </div>
         {paintings.length > 0 && (
           <PaintingWithLampFullSizeCarousel

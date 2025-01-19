@@ -110,7 +110,8 @@ const PicCarouselGalleryDesign: React.FC<PicCarouselProps> = ({
         />
         <div className="carousel carouselHeight" ref={imgRef}>
           <div className={frameColor ? 'black-outer-border' : 'white-outer-border'}
-            onClick={onChangeFrameColor}>
+            // onClick={onChangeFrameColor}
+            >
             <div className={innerFrame ? 'middle-border' : 'width-middle-border'}>
               <img
                 
