@@ -131,7 +131,7 @@ export const MobileView: React.FC<MobileViewProps> = ({ links,sofas,paintings,ar
       >
         {/* mockup settings  */}
         <div className="pb-2">
-          <Button onClick={toggleVisibility} className="m-1 bg-seccss rounded-pill">מצב צילום</Button>
+          
           <Button onClick={handleChangeInnerFrame} className="m-1 bg-dark rounded-pill">
             מסגרת פנימית
           </Button>
@@ -155,7 +155,7 @@ export const MobileView: React.FC<MobileViewProps> = ({ links,sofas,paintings,ar
 
         {isVisible ? <div className="pb-3 ">
           <div className="d-flex justify-content-center">
-            <div className="bg-dark w-25 text-center text-light py-1 my-3 rounded-pill">שנה רקע</div>
+            <div className="bg-dark w-25 text-center text-light py-1 fs-6 my-3 rounded-pill">שנה רקע</div>
           </div>
           <ColorPicker
             setSelectedColor={setSelectedColor}
@@ -168,11 +168,20 @@ export const MobileView: React.FC<MobileViewProps> = ({ links,sofas,paintings,ar
           />
         </div> : 
           
-          <div style={{height:"80px"}}> 
+          <div style={{height:"152px"}}> 
             <span></span>
           </div>
-
         }
+        <button
+        onClick={toggleVisibility}
+        className="btn m-1 bg-success text-white rounded-pill mt-2"
+      >
+         <i
+          className={` px-2 ${isVisible ? 'bi bi-camera-fill' : 'bi bi-camera'}`}
+          style={{ fontSize: '1.2rem' , position: 'relative', top: '2px'}}
+        ></i> 
+          מצב צילום   
+      </button>
       </div>
 
       <div className=" linkContainerFullScreen">

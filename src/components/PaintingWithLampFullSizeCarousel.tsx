@@ -77,13 +77,47 @@ const PicCarouselGalleryDesign: React.FC<PicCarouselProps> = ({
 
   // GSAP Animation for the main image
   useEffect(() => {
-    if (imgRef.current) {
-      gsap.fromTo(
-        imgRef.current,
-        { scale: 0.2, rotate: -700, opacity: 0 },
-        { scale: 1, rotate: 0, opacity: 1, duration: 0.5, ease: "power2.out" }
-      );
-    }
+    
+if (imgRef.current) {
+  const tl = gsap.timeline();
+
+  // Step 1: Initial scaling and rotation
+  tl.fromTo(
+    imgRef.current,
+    { scale: 1, rotate: -20, opacity: 0.6 },
+    { scale: 1, rotate: 15, opacity: 1, duration: 0.2, ease: "power2.out" }
+  )
+    // Step 2: Rotate back to 0 and scale slightly
+    .to(imgRef.current, {
+      scale: 1,
+      rotate: -5,
+      opacity: 1,
+      duration: 0.3,
+      ease: "power2.out",
+    })
+    .to(imgRef.current, {
+      scale: 1,
+      rotate: 4,
+      opacity: 1,
+      duration: 0.4,
+      ease: "power2.out",
+    })
+    .to(imgRef.current, {
+      scale: 1,
+      rotate: -2,
+      opacity: 1,
+      duration: 0.8,
+      ease: "power2.out",
+    })
+    // // Step 3: Return to final state
+    .to(imgRef.current, {
+      scale: 1,
+      rotate: 0,
+      opacity: 1,
+      duration: 1,
+      ease: "power2.out",
+    });
+}
 
     // GSAP Animation for the lamp image
     if (lampImgRef.current) {
