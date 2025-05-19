@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "src":"http://www.uploads.co.il/uploads/images/665649835.jpg",
+    "src":"https://i.imagesup.co/images2/6f8b92aeff411305b29335b2d060afcd75859d4c.jpg",
     "sofa_url":"http://www.uploads.co.il/uploads/images/635374834.png",
     "name": "שונית ורודה",
     "width": 100,
@@ -16,7 +16,7 @@
   },
   {
     "id": 2,
-    "src":"http://www.uploads.co.il/uploads/images/743967754.jpeg",
+    "src":"https://i.imagesup.co/images2/b2326671d4e66d5f505c8b217fd64f27453ae330.jpg",
     "sofa_url":"http://www.uploads.co.il/uploads/images/463954378.png",
     "name": "שונית כחולה",
     "width": 80,
@@ -29,40 +29,9 @@
     ]
 
   },
-  
-  {
-    "id": 3,
-    "src":"http://www.uploads.co.il/uploads/images/748036611.jpeg",
-    "sofa_url":"http://www.uploads.co.il/uploads/images/248736505.png",
-    "name": "אריה ",
-    "width": 60,
-    "height":90,
-    "price": [
-      {
-        "size":"20*40",
-        "price":1000
-      }
-    ]
-
-  },
-  {
-    "id": 4,
-    "src":"http://www.uploads.co.il/uploads/images/150666826.jpeg",
-    "sofa_url":"http://www.uploads.co.il/uploads/images/641244905.png",
-    "name": "נמר שלג",
-    "width": 60,
-    "height":100,
-    "price": [
-      {
-        "size":"20*40",
-        "price":1000
-      }
-    ]
-
-  },
   {
     "id": 5,
-    "src":"http://www.uploads.co.il/uploads/images/166983430.jpeg",
+    "src":"https://i.imagesup.co/images2/0e850dfeb76a9d7f6e90e66c527a82789a744293.jpg",
     "sofa_url":"http://www.uploads.co.il/uploads/images/641244905.png",
     "name": "צ׳יטה ורודה",
     "width": 50,
@@ -77,7 +46,7 @@
   },
   {
     "id": 6,
-    "src":"http://www.uploads.co.il/uploads/images/330658142.jpeg",
+    "src":"https://i.imagesup.co/images2/715e6d00adcd0b04ef6b3d70fc71c91a5f2a817c.jpg",
     "sofa_url":"http://www.uploads.co.il/uploads/images/463954378.png",
     "name": "פוקס - הארי פוטר",
     "width": 70,
@@ -92,7 +61,7 @@
   },
   {
     "id": 7,
-    "src":"http://www.uploads.co.il/uploads/images/718270956.jpeg",
+    "src":"https://i.imagesup.co/images2/f91812106466c36a1eab6eb2718455553bb4dd1f.jpg",
     "sofa_url":"http://www.uploads.co.il/uploads/images/463954378.png",
     "name": "חלוק מנומר",
     "width": 80,
@@ -107,7 +76,7 @@
   },
   {
     "id": 8,
-    "src":"http://www.uploads.co.il/uploads/images/150666826.jpeg",
+    "src":"https://i.imagesup.co/images2/890630229c28b4f3e8c1561968c74d5940ad3c96.jpg",
     "sofa_url":"http://www.uploads.co.il/uploads/images/641244905.png",
     "name": "נמר שלג",
     "width": 60,
@@ -122,7 +91,7 @@
   },
   {
     "id": 9,
-    "src":"http://www.uploads.co.il/uploads/images/245633046.jpeg",
+    "src":"https://i.imagesup.co/images2/a105abefa569d8b8457b3c607e2ce14d52f68e60.jpg",
     "sofa_url":"http://www.uploads.co.il/uploads/images/641244905.png",
     "name": "צ׳יטה מרוצים",
     "width": 50,
@@ -138,7 +107,7 @@
   
   {
     "id": 8,
-    "src":"http://www.uploads.co.il/uploads/images/546875241.jpeg",
+    "src":"https://i.imagesup.co/images2/46e2f3884e6536a50052c00b222c444719bb1c44.jpg",
     "sofa_url":"http://www.uploads.co.il/uploads/images/463954378.png",
     "name": "אריה",
     "width": 60,
@@ -154,7 +123,7 @@
 
   {
     "id": 9,
-    "src":"http://www.uploads.co.il/uploads/images/370981119.jpg",
+    "src":"https://i.imagesup.co/images2/b9bffe404c736ce85f3e07c646859f9bc6f181b1.jpg",
     "sofa_url":"http://www.uploads.co.il/uploads/images/463954378.png",
     "name": "פרידה",
     "width": 50,
