@@ -100,7 +100,12 @@
     }
   }
   
-
+  .header_title {
+    font-family: 'Ernest and Emily';
+    font-size:6vh;
+    color: rgb(255 255 255 / 23%);
+    -webkit-text-stroke: 1px #f5f5f5;
+  }
 
 .gif_header{
     object-fit: cover;
@@ -409,12 +414,6 @@
 
     }
   
-    .header_title {
-      font-family: 'Ernest and Emily';
-      font-size:4vh;
-      color: rgb(249 201 131)
-    }
-  
     .gif_header{
       width: 100%;
       object-fit: cover;
@@ -668,12 +667,7 @@
       direction: ltr;
     }
   
-    .header_title {
-      font-family: 'Ernest and Emily';
-      font-size:6vh;
-      color: rgb(249 201 131)
-      /* -webkit-text-stroke:1px #ffffff; */
-    }
+
   
     .gif_header{
       width: 100%;
@@ -797,13 +791,6 @@
       direction: rtl;
     }
   
-    .header_title {
-      font-family: 'Ernest and Emily';
-      font-size:7vh;
-      color: rgb(249 201 131)
-      /* -webkit-text-stroke:1px #ffffff; */
-    }
-  
     .gif_header{
       width: 100%;
       object-fit: cover;
@@ -882,9 +869,7 @@
     }
 
     .carousel-image {
-        // max-width: 100%;
         min-width: 120%;
-        // max-height: 400px;
         object-fit: contain;
       }
 
@@ -893,28 +878,26 @@
         max-height: 850px;
         max-width: 00px;
         object-fit: contain;
-        // transform: rotate(-2deg); /* Adds a slight tilt */
         box-shadow: 
          rgba(0, 0, 0, 0.4) 0px 2px 1px,
          rgba(0, 0, 0, 0.03) 0px 4px 2px, 
          rgba(0, 0, 0, 0.03) 0px 8px 4px, 
          rgba(0, 0, 0, 0.02) 0px 16px 8px, 
          rgba(0, 0, 0.0, 0.49) 5px 12px 19px;
-        border: 2px solid #1f1f1f; /* Simulates a photo border */
+        border: 2px solid #1f1f1f;
         margin-top: 40px;
         background: #fff;
       }
 
-      .mockupWallTest{  /*wall mockup picture */
-        width: 100%; /* Set the desired width */
-        height: 80vh; /* Set the desired height */
+      .mockupWallTest{
+        width: 100%;
+        height: 80vh;
         position: relative !important;
-        // background-image: url('http://www.uploads.co.il/uploads/images/963592288.jpg'); /* Set the background image */
-        background-size: cover; /* Ensure the image covers the container */
-        background-position: center; /* Center the image within the container */
-        background-repeat: no-repeat; /* Prevent the image from repeating */
-        overflow: hidden; /* Hide any overflowing content */
-        position: relative; /* Needed for absolute positioning of img */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        position: relative;
       }
 
     .navbar {
@@ -925,8 +908,9 @@
       font-family: 'Ernest and Emily';
       font-size:12vh;
       color: rgb(255 255 255 / 23%);
-      -webkit-text-stroke: 2.9px #f5f5f5;
+      -webkit-text-stroke: 1px #f5f5f5;
     }
+    
     .header_sub_title {
       font-family: 'Ernest and Emily';
       font-size:7vh;
@@ -1087,12 +1071,6 @@
   }
   /* 
   width={400} className='bounce-in-top' style={{bottom:'0',position:'absolute',left:'380',zIndex:"initial" */
-  
-  /* 
-    .header_title {
-      font-family: 'Ernest and Emily';
-      font-size:4vh;
-    } */
   
     .my_gallery{
       padding-top: 60px;

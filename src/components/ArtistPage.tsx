@@ -10,9 +10,9 @@ import headerImage from "../assets/gifs/headervideo2.gif";
 import AboutMe from "./AboutMe";
 import { Button, Navbar } from "react-bootstrap";
 import NavbarComp from "./Navbar";
-import Chips from "./Chips";
+import Chips from "./common/Chips";
 import Footer from "./Footer";
-import { useIsMobile } from "./common/IsMobile";
+import { useIsMobile } from "./hooks/IsMobile";
 
 interface MobileViewProps {
   sofas?: any;
@@ -29,7 +29,7 @@ interface LinkProp {
     color: string;
   }
 
-export const MobileView: React.FC<MobileViewProps> = ({ links,sofas,paintings,artistPic }) => {
+export const ArtistPage: React.FC<MobileViewProps> = ({ links,sofas,paintings,artistPic }) => {
     const [isVisible, setIsVisible] = useState<boolean>(true);
     const [wallColorsOptions,setWallColorOptions] = useState([]);
     const [selectedColor, setSelectedColor] = useState<string>("#d6d6d6");
@@ -229,4 +229,4 @@ export const MobileView: React.FC<MobileViewProps> = ({ links,sofas,paintings,ar
   );
 };
 
-export default MobileView;
+export default ArtistPage;
