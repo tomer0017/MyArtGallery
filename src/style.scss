@@ -38,6 +38,7 @@
       font-size: 1.1rem;
     }
   }
+
   .width{
     &-20{
         width: 20%;
@@ -51,11 +52,9 @@
     &-50{
         width: 50%;
     }
-
     &-55{
         width: 55%;
     }
-
     &-60{
         width: 60%;
     }
@@ -65,38 +64,58 @@
     &-70{
         width: 70%;
     }
-
     &-80{
         width: 80%;
+    }
+  }
+
+
+  .h{
+    &-20{
+      height: 20%;
+    }
+    &-30{
+      height: 30%;
+    }
+    &-40{
+      height: 40%;
+    }
+    &-50{
+      height: 50%;
+    }
+    &-55{
+      height: 55%;
+    }
+    &-60{
+      height: 60%;
+    }
+    &-65{
+      height: 65%;
+    }
+    &-70{
+      height: 70%;
+    }
+    &-80{
+      height: 80%;
     }
   }
   
 
 
 .gif_header{
-    height: 60vh;
     object-fit: cover;
     /* margin-bottom: 20px; */
    }
 
-
-   .p-colorpicker-preview{
-    border-radius: 50%;
+   .mockupWall { 
+    width: 100%;
+    height: 82vh; 
+    background-image: url('http://www.uploads.co.il/uploads/images/963592288.jpg');
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    overflow: hidden; 
     position: relative;
-    top:-8px;
-    width: 30px;
-    height: 30px;
-   }
-
-   .mockupWall {  /*wall mockup picture */
-    width: 100%; /* Set the desired width */
-    height: 82vh; /* Set the desired height */
-    background-image: url('http://www.uploads.co.il/uploads/images/963592288.jpg'); /* Set the background image */
-    background-size: cover; /* Ensure the image covers the container */
-    background-position: center; /* Center the image within the container */
-    background-repeat: no-repeat; /* Prevent the image from repeating */
-    overflow: hidden; /* Hide any overflowing content */
-    position: relative; /* Needed for absolute positioning of img */
   }
 
   .mockup_sofa{
@@ -118,7 +137,6 @@
     position: absolute;
     left: 50%;
     transform: translate(-50%, 0);
-    /* z-index: 1; */
     box-shadow: -3px 2px 8px 6px rgba(19, 19, 19, 0.3);
     border: 3px solid #202020;
     border-radius: 1px;
@@ -205,37 +223,26 @@
   }
   
   .about_me_text{
-    /* margin: 40px; */
     color: white;
-  font-family: inherit, Haettenschweiler, 'Arial Narrow Bold', sans-serif;;
+    font-family: inherit, Haettenschweiler, 'Arial Narrow Bold', sans-serif;;
   }
   
   .about_me_pic{
-    /* border: 5px solid #ddd;
-    border-radius: 4px; */
-    /* margin: 30px; */
     width: 75%;
-  
   }
   
   
   .img_gallery {
-    /* float: left; */
     width:  100%;
     height:70%;
     object-fit:cover;
   }
-  
   
   .main{
     position: relative;
     width: 100%;
     height: 100%;
   }
-  
-  
-  
-  
   
   .content{
     position: absolute;
@@ -249,15 +256,6 @@
     color: white;
   
   }
-  /* 
-  .overlay{
-    position: absolute;
-    top:0;
-    left: 0;
-    width: 100%;
-    /* height: 100%; */
-    /* background-color: rgba(0,0,0,.2); 
-  } */
   
   .navbar {
   z-index: 2;
@@ -271,48 +269,12 @@
     width: 100px;
     height: 50px;
   }
-  /* 
-  .wall_parent{
-    top:0;
-    left: 0;
-    position: relative;
-  }
-  
-  .big_wall{
-    position: absolute;
-      top: 0;
-      left: 0;
-    width: 100%;
-    height: 530px;
-    background-color: rgb(83, 83, 83);
-    object-fit: cover;
-  }
-  
-  .floor{
-    position: absolute;
-    top: 530px;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    background-color: rgb(119, 119, 119);
-    object-fit: cover;
-  }
-  
-  .man_stand{
-    position: absolute;
-      top: 170px;
-      left: 100px;
-      object-fit: cover;
-    
-  } */
   
   .gallery_grid{
-    /* background-color: black; */
     text-align: center;
     position: relative;
     top:0;
   }
-  
   
   .swiper {
     width: 100%;
@@ -328,14 +290,9 @@
   }
   
   .swiper-slide img {
-    /* width: 70%; */
     object-fit: cover;
-    /* height: 50vh; */
-    /* margin: 20px; */
     box-shadow: -3px 2px 8px 6px rgba(19, 19, 19, 0.3);
-    /* border: 4px solid #3b3b3b;; */
     border-radius: 4px;
-    
   }
   
   @media screen and (min-width: 300px) {
@@ -367,18 +324,15 @@
 
       .framedPainting {
         display: inline-block;
-        // position: relative;
         max-height: 170px;
-        // max-width: 50%;
         object-fit: contain;
-        // transform: rotate(-2deg); /* Adds a slight tilt */
         box-shadow: 
          rgba(0, 0, 0, 0.4) 0px 2px 1px,
          rgba(0, 0, 0, 0.03) 0px 4px 2px, 
          rgba(0, 0, 0, 0.03) 0px 8px 4px, 
          rgba(0, 0, 0, 0.02) 0px 16px 8px, 
          rgba(0, 0, 0.0, 0.49) 5px 12px 19px;
-        border: 2px solid #1f1f1f; /* Simulates a photo border */
+        border: 2px solid #1f1f1f;
         margin-top: 60px;
         background: #fff;
       }
@@ -391,8 +345,8 @@
             rgba(0, 0, 0, 0.03) 0px 8px 4px, 
             rgba(241, 241, 241, 0.02) 0px 16px 8px, 
             rgba(11, 11, 11, 0.3) 7px 7px 5px;
-        border: 5px solid transparent; /* Set to transparent initially */
-        border-image: linear-gradient(20deg, #090909, #2a2a2a); /* Your gradient colors */
+        border: 5px solid transparent;
+        border-image: linear-gradient(20deg, #090909, #2a2a2a);
         border-image-slice: 1;
         background: #fff;
     }
@@ -404,8 +358,8 @@
             rgba(0, 0, 0, 0.03) 0px 8px 4px, 
             rgba(241, 241, 241, 0.02) 0px 16px 8px, 
             rgba(11, 11, 11, 0.3) 7px 7px 5px;
-            border: 5px solid transparent; /* Simulates a photo border */
-            border-image: linear-gradient(20deg, #c5c5c5, #e5e5e5); /* Your gradient colors */
+            border: 5px solid transparent;
+            border-image: linear-gradient(20deg, #c5c5c5, #e5e5e5);
             border-image-slice: 1;
             background: #fff;
     }
@@ -423,9 +377,7 @@
 
     .inner-border{
       display: inline-block;
-      // position: relative;
       max-height: 250px;
-      // max-width: 50%;
       object-fit: contain;
       box-shadow: rgba(0.3, 0.3, 0.3, 0.3) 0px 2px 2px;
       border: 1px solid #090909;
@@ -434,16 +386,15 @@
 //-------------------------------------------------------------------------------------------------     
 
 
-       .mockupWallTest{  /*wall mockup picture */
-        width: 100%; /* Set the desired width */
-        height: 45vh; /* Set the desired height */
+       .mockupWallTest{ 
+        width: 100%;
+        height: 40vh; 
         position: relative !important;
-        // background-image: url('http://www.uploads.co.il/uploads/images/963592288.jpg'); /* Set the background image */
-        background-size: cover; /* Ensure the image covers the container */
-        background-position: center; /* Center the image within the container */
-        background-repeat: no-repeat; /* Prevent the image from repeating */
-        overflow: hidden; /* Hide any overflowing content */
-        position: relative; /* Needed for absolute positioning of img */
+        background-size: cover; 
+        background-position: center; 
+        background-repeat: no-repeat; 
+        overflow: hidden; 
+        position: relative; 
       }
 
     .logo {
@@ -451,15 +402,6 @@
       height: 120px;
       width: 140px;
       }
-  
-    // .about_me{
-    //   transform: translate(0%, -9%);   /*for mobile */
-    //   border-radius: 40px;
-    //   background-color: #343434;
-    //   padding:15px ;
-    //   /* margin: 30px; */
-    //   text-align: center;
-    //   }
   
     .navbar {
       direction: ltr;
@@ -471,12 +413,10 @@
       font-family: 'Ernest and Emily';
       font-size:4vh;
       color: rgb(249 201 131)
-      /* -webkit-text-stroke:1px #ffffff; */
     }
   
     .gif_header{
       width: 100%;
-      height: 28vh;
       object-fit: cover;
       margin-bottom: 20px;
      }
@@ -548,7 +488,6 @@
       position: absolute;
       left: 50%;
       transform: translate(-50%, 0);
-      /* z-index: 1; */
       box-shadow: -3px 2px 8px 6px rgba(19, 19, 19, 0.3);
       border: 3px solid #202020;
       border-radius: 1px;
@@ -560,11 +499,10 @@
       position: absolute;
       left: 50%;
       transform: translate(-50%, 0);
-      /* z-index: 1; */
       box-shadow: -3px 2px 8px 6px rgba(19, 19, 19, 0.3);
       border: 3px solid #ffffff;
-    outline: 2px solid #0b0b0b;
-    border-radius: 1px;
+      outline: 2px solid #0b0b0b;
+      border-radius: 1px;
     }
   
     
@@ -573,8 +511,7 @@
       position:relative;
       text-Align:-webkit-center;
       background: rgb(39,39,39);
-    //   background: linear-gradient(180deg, rgba(39,39,39,1) 0%, rgba(108,108,108,1) 22%, rgba(136,136,136,1) 37%, rgba(217,217,217,1) 75%, rgba(186,184,177,1) 100%);
-      
+
     }
   
     .image-container {  /*wall mockup picture */
@@ -650,6 +587,14 @@
    
   //mobile size
     @media screen and (max-width: 576px) {
+
+      .gif_header{
+        width: 100%;
+        height: 28vh;
+        object-fit: cover;
+        margin-bottom: 20px;
+       }
+
       .web-view {
         display: none;
       }
@@ -671,7 +616,7 @@
         }
 
         .circleAvatar{
-            top: -97px;
+            top: -160px;
             position: relative; 
             border-radius: 50%;
             padding: 2%;
@@ -732,7 +677,6 @@
   
     .gif_header{
       width: 100%;
-      height: 35vh;
       object-fit: cover;
       margin-bottom: 20px;
      }
@@ -862,7 +806,6 @@
   
     .gif_header{
       width: 100%;
-      height: 55vh;
       object-fit: cover;
       margin-bottom: 20px;
      }
@@ -935,7 +878,7 @@
   @media screen and (min-width: 1250px) {
   
     .carouselHeight{
-        height: 40vh;
+        height:40vh;
     }
 
     .carousel-image {
@@ -947,8 +890,7 @@
 
     .framedPainting {
         display: inline-block;
-        // position: relative;
-        max-height: 300px;
+        max-height: 850px;
         max-width: 00px;
         object-fit: contain;
         // transform: rotate(-2deg); /* Adds a slight tilt */
@@ -965,7 +907,7 @@
 
       .mockupWallTest{  /*wall mockup picture */
         width: 100%; /* Set the desired width */
-        height: 70vh; /* Set the desired height */
+        height: 80vh; /* Set the desired height */
         position: relative !important;
         // background-image: url('http://www.uploads.co.il/uploads/images/963592288.jpg'); /* Set the background image */
         background-size: cover; /* Ensure the image covers the container */
@@ -982,13 +924,19 @@
     .header_title {
       font-family: 'Ernest and Emily';
       font-size:12vh;
-      color: rgb(249 201 131)
-      /* -webkit-text-stroke:1px #ffffff; */
+      color: rgb(255 255 255 / 23%);
+      -webkit-text-stroke: 2.9px #f5f5f5;
     }
+    .header_sub_title {
+      font-family: 'Ernest and Emily';
+      font-size:7vh;
+      color: rgb(183, 164, 164);
+      -webkit-text-stroke: 1px #000000;
+    }
+  
   
     .gif_header{
       width: 100%;
-      height: 85vh;
       object-fit: cover;
       margin-bottom: 20px;
      }
@@ -1224,12 +1172,20 @@
     margin: 0 auto;
   }
   
+  .topBottomBtnCarousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // top: 110px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+
   .carousel {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 60px;
-    margin-bottom: 60px;
+    top: 110px;
   }
   
   
@@ -1297,6 +1253,10 @@
   }
   
   .circleAvatar{
+    margin: 70px;
+    max-width: 500px;
+    width: 40%;
+    position: relative; 
     border-radius: 50%;
     padding: 2%;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
@@ -1357,11 +1317,6 @@
     padding-bottom: 50px !important;
   }
 
-  .linkContainerFullScreen{
-    padding-top: 50px !important;
-    padding-bottom: 50px !important;
-  }
-
   .linkButton{
     width: 300px !important;
     border-radius: 10px;
@@ -1402,13 +1357,6 @@
 	        animation: slide-out-bck-center 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 }
 
-/* ----------------------------------------------
- * Generated by Animista on 2024-6-12 17:25:6
- * Licensed under FreeBSD License.
- * See http://animista.net/license for more info. 
- * w: http://animista.net, t: @cssanimista
- * ---------------------------------------------- */
-
 /**
  * ----------------------------------------
  * animation slide-out-bck-center
@@ -1438,13 +1386,6 @@
     opacity: 0;
   }
 }
-
-/* ----------------------------------------------
- * Generated by Animista on 2024-6-11 20:56:20
- * Licensed under FreeBSD License.
- * See http://animista.net/license for more info. 
- * w: http://animista.net, t: @cssanimista
- * ---------------------------------------------- */
 
 /**
  * ----------------------------------------
@@ -1492,14 +1433,6 @@
   }
 }
 
-
-/* ----------------------------------------------
- * Generated by Animista on 2024-6-4 18:43:31
- * Licensed under FreeBSD License.
- * See http://animista.net/license for more info. 
- * w: http://animista.net, t: @cssanimista
- * ---------------------------------------------- */
-
 /**
  * ----------------------------------------
  * animation roll-out-left
@@ -1529,14 +1462,6 @@
     opacity: 0;
   }
 }
-
-
-/* ----------------------------------------------
- * Generated by Animista on 2024-5-27 10:44:17
- * Licensed under FreeBSD License.
- * See http://animista.net/license for more info. 
- * w: http://animista.net, t: @cssanimista
- * ---------------------------------------------- */
 
 /**
  * ----------------------------------------
@@ -1671,13 +1596,6 @@
             animation-timing-function: ease-out;
   }
 }
-
-/* ----------------------------------------------
- * Generated by Animista on 2024-6-1 15:48:43
- * Licensed under FreeBSD License.
- * See http://animista.net/license for more info. 
- * w: http://animista.net, t: @cssanimista
- * ---------------------------------------------- */
 
 /**
  * ----------------------------------------

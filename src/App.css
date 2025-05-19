@@ -6,8 +6,6 @@ body {
   z-index: 0;
 }
 
-
-
 .background1 {
   position: fixed;
   top: 0;
@@ -18,10 +16,7 @@ body {
   background-size: cover; /* Ensures the image covers the screen */
   background-position: center; /* Center the background image */
   background-repeat: no-repeat; /* Prevent repetition */
-  
 }
-
-
 
 .logo {
   height: 6em;

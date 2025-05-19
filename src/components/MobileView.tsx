@@ -6,12 +6,13 @@ import TexturePicker from "./TexturePicker";
 import PaintingWithLampFullSizeCarousel from "./PaintingWithLampFullSizeCarousel";
 import Header from "./Header";
 import headerVideo from "../assets/gifs/headervideo2.gif";
+import headerImage from "../assets/gifs/headervideo2.gif";
 import AboutMe from "./AboutMe";
 import { Button, Navbar } from "react-bootstrap";
 import NavbarComp from "./Navbar";
 import Chips from "./Chips";
 import Footer from "./Footer";
-// import { ColorPicker } from 'primereact/colorpicker';
+import { useIsMobile } from "./common/IsMobile";
 
 interface MobileViewProps {
   sofas?: any;
@@ -24,7 +25,7 @@ interface LinkProp {
     id: number;
     name: string;
     link: string;
-    icon?: string; // Optional property, since not all links may have an icon
+    icon?: string; 
     color: string;
   }
 
@@ -36,6 +37,8 @@ export const MobileView: React.FC<MobileViewProps> = ({ links,sofas,paintings,ar
     const [selectedTexture, setSelectedTexture] = useState<string>("https://static.vecteezy.com/system/resources/previews/007/625/838/non_2x/old-grunge-white-cement-wall-texture-for-background-photo.jpg");
     const [frameColor, setFrameColor] = useState(true);
     const [innerFrame, setInnerFrame] = useState(true);
+    const isMobile = useIsMobile();
+    const headerImg = 'https://i.imagesup.co/images2/7f9433e0967c584a6585dea77d7db14f859d17c8.jpg'
 
     const [animateType, setAnimateType] = useState("in");
 
@@ -79,7 +82,7 @@ export const MobileView: React.FC<MobileViewProps> = ({ links,sofas,paintings,ar
       const handleChangeFrameColor = () => {
         setFrameColor((prev) => !prev);
       };
-
+ 
       const handleChangeInnerFrame = () => {
         setInnerFrame((prev) => !prev);
       };
@@ -89,36 +92,42 @@ export const MobileView: React.FC<MobileViewProps> = ({ links,sofas,paintings,ar
       };
 
   return (
-    <div className="mobile-view text-center">
+    <div className="text-center">
       <NavbarComp />
-      <Header headerVideo={headerVideo} />
-      <img src={artistPic} className="circleAvatar width-40" />
+      <Header headerSrc={isMobile? headerVideo: headerImg} className="h-20" mainTitle="Tomer Cohen Art"/>
+      <img src={artistPic} className="circleAvatar width-60" />
       <div className="position-relative d-flex justify-content-center align-items-center">
         <Chips text="@Tomer_Cohen_Art" bgColor="" color="text-l-grey" />
       </div>
-
-      {/* <h2 className="fs-3 pt-2 pb-2 mb-4 bg-body rubikRegular text-secondary artistName">@Tomer_Cohen_Art</h2> */}
       <AboutMe />
 
-      {/* OPTION1- FULL LIVINGROOM */}
 
-      {/* <div style={
+    {/* OPTION1- FULL LIVINGROOM */}
+
+      <div className="web-view" style={
     selectedTexture
       ? { backgroundImage: `url(${selectedTexture})`, backgroundSize: "cover", backgroundPosition: "center",paddingBottom: '60px' }
       : { backgroundColor: selectedColor, paddingBottom: '100px' }
   }> 
   <div className="mockupWallTest" >
-  {paintings.length>0 && <PicCarouselGalleryDesign rightArrowClassName={'side-right-arrow'}leftArrowClassName={'side-left-arrow'} data={paintings} className={"framedPainting"} />}
+  {paintings.length>0 && 
+    <PicCarouselGalleryDesign rightArrowClassName={'side-right-arrow'}leftArrowClassName={'side-left-arrow'} data={paintings} className={"framedPainting"} />
+  }
     </div>  
 
+  {/* SOFA
   {
-  paintings.length>0 && <PicCarousel setAnimateType={setAnimateType} animateType={animateType} rightArrowClassName={'below-right-arrow'}leftArrowClassName={'below-left-arrow'} data={sofas} className={"carousel-image"}/>}
+  paintings.length>0 && 
 
-</div>  */}
+    <PicCarousel setAnimateType={setAnimateType} animateType={animateType} rightArrowClassName={'below-right-arrow'}leftArrowClassName=
+    {'below-left-arrow'} data={sofas} className={"carousel-image"}/>
+  } */}
+
+</div> 
 
       {/* OPTION2- ONLY LAMP&PAINTING */}
       <div
-        className="position-relative pt-4 mt-5"
+        className="position-relative pt-4 mt-5 mobile-view"
         style={
           selectedTexture
             ? {
@@ -139,7 +148,7 @@ export const MobileView: React.FC<MobileViewProps> = ({ links,sofas,paintings,ar
           <button onClick={handleChangeFrameColor} className="m-1 p-2 px-3 shadow bg-dark text-light rounded-pill">
             מסגרת חיצונית
           </button>
-          {/* <Button className="m-1 bg-dark rounded-pill">כמות תמונות</Button> */}
+
         </div>
         {paintings.length > 0 && (
           <PaintingWithLampFullSizeCarousel

@@ -142,7 +142,7 @@ if (imgRef.current) {
           src="http://www.uploads.co.il/uploads/images/622590044.png"
           className="galleryLampFullSize galleryLampFullSize width-80 pt-4"
         />
-        <div className="carousel carouselHeight" ref={imgRef}>
+        <div className="topBottomBtnCarousel carouselHeight" ref={imgRef}>
           <div className={frameColor ? 'black-outer-border' : 'white-outer-border'}
             // onClick={onChangeFrameColor}
             >
