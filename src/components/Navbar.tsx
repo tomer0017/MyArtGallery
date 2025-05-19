@@ -13,7 +13,7 @@ export const NavbarComp: React.FC = () => {
           <img className="logo" src={Logo_2} alt="Logo" />
         </Navbar.Brand>
         <Nav>
-          <Nav.Link href="#home" style={{ fontSize: 18 }}>
+          {/* <Nav.Link href="#home" style={{ fontSize: 18 }}> //TODO
             הדפסים למכירה
           </Nav.Link>
           <Nav.Link href="#features" style={{ fontSize: 18 }}>
@@ -24,7 +24,7 @@ export const NavbarComp: React.FC = () => {
           </Nav.Link>
           <Nav.Link href="#pricing2" style={{ fontSize: 18 }}>
             צור קשר
-          </Nav.Link>
+          </Nav.Link> */}
         </Nav>
         <Nav>
           <Nav.Link>

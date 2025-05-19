@@ -1,8 +1,8 @@
 [
   {
     "id": 1,
-    "icon": "fas fa-paint-brush",
-    "name": "Order Painting",
+    "icon": "fa-solid fa-cart-shopping",
+    "name": "לרכישת ציור",
     "link": "https://www.etsy.com/shop/TomercohenArt?ref=seller-platform-mcnav",
     "color": "#a6c2cba8" 
   },
