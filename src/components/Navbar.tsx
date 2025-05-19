@@ -7,7 +7,12 @@ import Logo_2 from "../assets/images/logo_sofi.png";
 
 export const NavbarComp: React.FC = () => {
   return (
-    <Navbar className="position-relative d-flex justify-content-center justify-content-md-start" dir="rtl" bg="dark" data-bs-theme="dark">
+    <Navbar
+      className="position-relative d-flex justify-content-center justify-content-md-start"
+      dir="rtl"
+      bg="dark"
+      data-bs-theme="dark"
+    >
       <div className="ps-2" style={{ display: "ruby" }}>
         <Navbar.Brand href="#home">
           <img className="logo" src={Logo_2} alt="Logo" />
@@ -27,23 +32,33 @@ export const NavbarComp: React.FC = () => {
           </Nav.Link> */}
         </Nav>
         <Nav>
-          <Nav.Link>
-            <img
-              src="https://cdn.iconscout.com/icon/free/png-512/free-instagram-1946323-1646407.png?f=webp&w=256"
-              alt="Instagram"
-              width={40}
-            />
-            <img
-              src="https://cdn.iconscout.com/icon/free/png-512/free-tiktok-11306346-9343757.png?f=webp&w=256"
-              alt="TikTok"
-              width={30}
-            />
-          </Nav.Link>
+            <a
+              href="https://www.instagram.com/tomer_cohen_art"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-2"
+            >
+              <img
+                src="https://cdn.iconscout.com/icon/free/png-512/free-instagram-1946323-1646407.png?f=webp&w=256"
+                alt="Instagram"
+                width={40}
+              />
+            </a>
+            <a
+              href="https://www.tiktok.com/@tomer_cohen_art"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-2"
+            >
+              <img
+                src="https://cdn.iconscout.com/icon/free/png-512/free-tiktok-11306346-9343757.png?f=webp&w=256"
+                alt="TikTok"
+                width={30}
+              />
+            </a>
         </Nav>
       </div>
     </Navbar>
-
-
   );
 };
 
