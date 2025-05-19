@@ -95,7 +95,9 @@ export const ArtistPage: React.FC<MobileViewProps> = ({ links,sofas,paintings,ar
     <div className="text-center">
       <NavbarComp />
       <Header headerSrc={isMobile? headerVideo: headerImg} className="h-20" mainTitle="Tomer Cohen Art"/>
-      <img src={artistPic} className="circleAvatar width-60" />
+      <div>
+        <img src={artistPic} className="circleAvatar width-60" />
+      </div>
       <div className="position-relative d-flex justify-content-center align-items-center">
         <Chips text="@Tomer_Cohen_Art" bgColor="" color="text-l-grey" />
       </div>
