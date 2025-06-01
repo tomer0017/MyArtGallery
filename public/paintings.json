@@ -135,7 +135,67 @@
       }
     ]
 
+  },
+  {
+    "id": 10,
+    "src":"https://tomercohenart.com/wp-content/uploads/2024/07/%D7%A9%D7%A7%D7%98-%D7%A4%D7%A8%D7%90%D7%99.jpg",
+    "sofa_url":"http://www.uploads.co.il/uploads/images/463954378.png",
+    "name": "טבע פראי",
+    "width": 50,
+    "height":50,
+    "price": [
+      {
+        "size":"50*50",
+        "price":1000
+      }
+    ]
+
   }
-  
+  ,
+  {
+    "id": 11,
+    "src":"https://tomercohenart.com/wp-content/uploads/2024/07/%D7%94%D7%AA%D7%91%D7%95%D7%A0%D7%A0%D7%95%D7%AA.jpg",
+    "sofa_url":"http://www.uploads.co.il/uploads/images/463954378.png",
+    "name": "התבוננות",
+    "width": 60,
+    "height":120,
+    "price": [
+      {
+        "size":"50*50",
+        "price":1000
+      }
+    ]
+
+  }
+  ,
+  {
+    "id": 12,
+    "src":"https://tomercohenart.com/wp-content/uploads/2024/07/%D7%A0%D7%A7%D7%95%D7%93%D7%95%D7%AA-%D7%9C%D7%9E%D7%97%D7%A9%D7%91%D7%94-B.png",
+    "sofa_url":"http://www.uploads.co.il/uploads/images/463954378.png",
+    "name": "נקודות למחשבה",
+    "width": 60,
+    "height":90,
+    "price": [
+      {
+        "size":"50*50",
+        "price":1000
+      }
+    ]
+  }
+  ,
+  {
+    "id": 13,
+    "src":"https://tomercohenart.com/wp-content/uploads/2024/07/%D7%A0%D7%A7%D7%95%D7%93%D7%95%D7%AA-%D7%9C%D7%9E%D7%97%D7%A9%D7%91%D7%94-A.png",
+    "sofa_url":"http://www.uploads.co.il/uploads/images/463954378.png",
+    "name": "נקודות למחשבה",
+    "width":60,
+    "height":90,
+    "price": [
+      {
+        "size":"50*50",
+        "price":1000
+      }
+    ]
+  }
 ]
 
